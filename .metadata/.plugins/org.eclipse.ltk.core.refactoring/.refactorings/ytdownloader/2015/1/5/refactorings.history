@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dentex.youtube.downloader.SettingsActivity&apos; to &apos;ytdownloader&apos;&#x0D;&#x0A;- Original project: &apos;ytdownloader&apos;&#x0D;&#x0A;- Original element: &apos;dentex.youtube.downloader.SettingsActivity&apos;&#x0D;&#x0A;- Renamed element: &apos;dentex.youtube.downloader.ytdownloader&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SettingsActivity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dentex.youtube.downloader{SettingsActivity.java[SettingsActivity" matchStrategy="1" name="ytdownloader" qualified="false" references="true" similarDeclarations="true" stamp="1422351172108" textual="false" version="1.0"/>
+</session>

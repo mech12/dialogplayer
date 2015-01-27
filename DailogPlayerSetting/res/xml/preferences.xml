@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <Preference    
+		android:key="dm"
+		android:title="@string/dm_title"
+		android:summary="@string/dm_summary" />
+    
+    <PreferenceCategory
+    	android:title="@string/settings_cat_folder">
+
+        <ListPreference
+            android:dependency="swap_location"
+            android:key="standard_location"
+            android:title="@string/standard_location_title"
+            android:dialogTitle="@string/standard_location_title"
+            android:entries="@array/standard_location_entries"
+            android:entryValues="@array/standard_location_entry_values"
+            android:defaultValue="@string/standard_location_default" />
+            	
+    	<SwitchPreference
+        	android:key="swap_location"
+        	android:title="@string/chooser_swap_title"
+        	android:switchTextOn="ON"
+        	android:switchTextOff="OFF"
+        	android:defaultValue="false" 
+        	android:disableDependentsState="true" />
+    	
+		<PreferenceScreen
+		    android:key="open_chooser"
+		    android:title="@string/chooser_location_title" />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/settings_cat_files">
+            
+    	<CheckBoxPreference
+        	android:key="enable_q_suffix"
+        	android:title="@string/enable_q_suffix_title"
+        	android:summary="@string/enable_q_suffix_summary"
+        	android:defaultValue="true" />
+    	
+    	<CheckBoxPreference
+        	android:key="enable_rename"
+        	android:title="@string/enable_rename_title"
+        	android:summary="@string/enable_rename_summary"
+        	android:defaultValue="false" />
+	            
+        <CheckBoxPreference
+            android:key="show_size"
+            android:title="@string/show_size_title"
+            android:summary="@string/show_size_summary" 
+            android:defaultValue="false"/>
+    
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/settings_cat_tutorials">
+         
+        <Preference 
+            android:key="quick_start"
+            android:title="@string/quick_start_title" 
+            android:summary="@string/quick_start_summ" />
+               	
+    	<CheckBoxPreference
+        	android:key="general_info"
+        	android:title="@string/general_info_title"
+        	android:summary="@string/general_info_summary"
+        	android:defaultValue="true" />
+    	
+    	<CheckBoxPreference
+        	android:key="ssh_info"
+        	android:title="@string/ssh_info_title"
+        	android:summary="@string/ssh_info_summary"
+        	android:defaultValue="true" />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+    	android:title="@string/settings_cat_about" >
+    	
+        <Preference 
+        	android:key="update"
+			android:title="@string/update_title" />
+		
+	    <Preference 
+	        android:key="changelog"
+	        android:title="@string/title_changelog"/>
+	    
+	    <PreferenceScreen
+	        android:key="licenses_code"
+	        android:title="@string/screen_licences_code_title" >
+	    
+		    <PreferenceCategory 
+		        android:title="@string/settings_cat_licenses">
+		    	
+		        <Preference
+		            android:key="gpl"
+		            android:title="@string/gpl_title"
+		            android:summary="@string/gpl_summary" />
+		        
+		        <Preference
+		            android:key="mit"
+		            android:title="@string/mit_title"
+		            android:summary="@string/mit_summary" />
+		    
+		    </PreferenceCategory>
+		    
+		    <PreferenceCategory 
+		        android:title="@string/settings_cat_code">
+		        
+		        <Preference 
+		            android:key="ytd_code_git"
+		            android:title="@string/ytd_code_git_title"
+		            android:summary="@string/ytd_code_git_summary" />
+		        
+		        <Preference 
+		            android:key="ytd_code_hg"
+		            android:title="@string/ytd_code_hg_title"
+		            android:summary="@string/ytd_code_hg_summary" />
+		                
+		        <Preference 
+		            android:key="chooser_code"
+		            android:title="@string/chooser_code_title"
+		            android:summary="@string/chooser_code_summary" />
+		        
+		    </PreferenceCategory>
+		
+		</PreferenceScreen>
+		
+	</PreferenceCategory>
+	
+   	<PreferenceCategory 
+        android:title="@string/settings_cat_social">
+        
+        <Preference
+            android:key="share"
+            android:title="@string/share_title"
+            android:summary="@string/share_summary" />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>
