@@ -1,0 +1,4 @@
+#Thu Jan 29 23:33:25 KST 2015
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=WebView

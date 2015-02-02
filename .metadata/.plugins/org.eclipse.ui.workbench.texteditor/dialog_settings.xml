@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="09R8_2nJtjg" key="selection"/>
+		<item value="chooser_location_title" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="chooser_location_title"/>
+			<item value="main_newaccount"/>
 			<item value="09R8_2nJtjg"/>
 			<item value="ytdownloader"/>
 			<item value="links"/>
 			<item value="Background"/>
 			<item value="downloadUrl"/>
 			<item value="readIt"/>
-			<item value="urlBlockMatchAndDecode"/>
-			<item value="findCodecAndQualityAndLinks"/>
 		</list>
 		<list key="replacehistory">
 		</list>

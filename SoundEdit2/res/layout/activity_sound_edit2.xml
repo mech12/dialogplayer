@@ -1,0 +1,24 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:custom12="http://schemas.android.com/apk/res/com.example.soundedit2"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+<com.example.soundedit2.SoundEditWidget2  
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	/>
+<com.example.soundedit2.SoundEditWidget2  
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	custom12:sound="2"
+	/>
+<com.example.soundedit2.SoundEditWidget2  
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	custom12:sound="2"
+	custom12:speed="0.5"
+	custom12:volume="0.5" 
+	/>
+</LinearLayout>
