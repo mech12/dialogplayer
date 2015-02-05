@@ -14,6 +14,8 @@ org.eclipse.jdt.ui.javadoclocations.migrated=true
 org.eclipse.jdt.ui.ondemandthreshold=1
 org.eclipse.jdt.ui.overrideannotation=true
 org.eclipse.jdt.ui.staticondemandthreshold=99
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.jdt.ui.text.templates_migrated=true
 org.eclipse.jface.textfont=1|\uAD74\uB9BC|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|-127|3|2|1|50|\uAD74\uB9BC;
