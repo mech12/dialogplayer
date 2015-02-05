@@ -1,0 +1,11 @@
+package com.wecandoit.jmediasplitplayer;
+
+public class Snippet {
+	public static void main(String[] args) {
+		/Test_TabsWithSwipeGesture/src/info/androidhive/tabsswipe/GamesFragment.java
+		/Test_TabsWithSwipeGesture/src/info/androidhive/tabsswipe/MoviesFragment.java
+		/Test_TabsWithSwipeGesture/src/info/androidhive/tabsswipe/TopRatedFragment.java
+		/Test_TabsWithSwipeGesture/src/info/androidhive/tabsswipe/adapter/TabsPagerAdapter.java
+	}
+}
+

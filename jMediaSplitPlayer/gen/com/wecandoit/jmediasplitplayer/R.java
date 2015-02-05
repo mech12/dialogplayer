@@ -45,10 +45,13 @@ public final class R {
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int fragment_education=0x7f030001;
-        public static final int fragment_home=0x7f030002;
-        public static final int fragment_main=0x7f030003;
-        public static final int fragment_mylist=0x7f030004;
-        public static final int fragment_navigation_drawer=0x7f030005;
+        public static final int fragment_games=0x7f030002;
+        public static final int fragment_home=0x7f030003;
+        public static final int fragment_main=0x7f030004;
+        public static final int fragment_movies=0x7f030005;
+        public static final int fragment_mylist=0x7f030006;
+        public static final int fragment_navigation_drawer=0x7f030007;
+        public static final int fragment_top_rated=0x7f030008;
     }
     public static final class menu {
         public static final int global=0x7f070000;

@@ -15,8 +15,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.*;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 
-public class MainActivity extends Activity implements
+public class MainActivity
+	extends Activity
+	//extends FragmentActivity 
+	implements
+		//ActionBar.TabListener ,
 		NavigationDrawerFragment.NavigationDrawerCallbacks {
 
 	/**
@@ -31,6 +37,11 @@ public class MainActivity extends Activity implements
 	 */
 	private CharSequence mTitle;
 
+	private ViewPager mViewPager;
+	private TabsPagerAdapter mAdapter;
+	private ActionBar mActionBar;
+
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -67,15 +78,15 @@ public class MainActivity extends Activity implements
 		case 3:
 			mTitle = getString(R.string.title_education);
 			break;
-            case 4:
-                mTitle = getString(R.string.title_music);
-                break;
-            case 5:
-                mTitle = getString(R.string.title_dance);
-                break;
-            case 6:
-                mTitle = getString(R.string.title_setting);
-                break;
+        case 4:
+            mTitle = getString(R.string.title_music);
+            break;
+        case 5:
+            mTitle = getString(R.string.title_dance);
+            break;
+        case 6:
+            mTitle = getString(R.string.title_setting);
+            break;
 		}
 	}
 
@@ -234,4 +245,22 @@ public class MainActivity extends Activity implements
         }
 
     }
+
+    
+/*
+	@Override
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+	}
+
+	@Override
+	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		// on tab selected
+		// show respected fragment view
+		mViewPager.setCurrentItem(tab.getPosition());
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+	}
+	*/
 }
