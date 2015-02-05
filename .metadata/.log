@@ -935,3 +935,298 @@ Binding(ALT+SHIFT+ARROW_UP,
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 17:52:25.403
 !MESSAGE Failed to load properties file for project 'jMediaSplitPlayer'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 18:17:38.099
+!MESSAGE Could not read Manifest data
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: Resource '/NavigationDrawer/AndroidManifest.xml' does not exist.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:55)
+	at com.android.ide.eclipse.adt.internal.editors.manifest.ManifestInfo.sync(ManifestInfo.java:339)
+	at com.android.ide.eclipse.adt.internal.editors.manifest.ManifestInfo.getMinSdkVersion(ManifestInfo.java:544)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launch(AndroidLaunchController.java:335)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.doLaunch(LaunchConfigDelegate.java:330)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:246)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource '/NavigationDrawer/AndroidManifest.xml' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:287)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	... 10 more
+
+!ENTRY org.eclipse.ui.workbench 4 0 2015-02-05 19:46:35.653
+!MESSAGE Trying to execute the disabled command org.eclipse.ui.window.showViewMenu
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.window.showViewMenu
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:525)
+	at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:157)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1053)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:07:02.184
+!MESSAGE Failed to load properties file for project 'jMediaSplitPlayer_4_0'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:12:28.030
+!MESSAGE Failed to load properties file for project 'jMediaSplitPlayer_4_0'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:25:13.453
+!MESSAGE Failed to load properties file for project 'jMediaSplitPlayer'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:54:52.158
+!MESSAGE 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'D:\adt_job\workspace\jMediaSplitPlayer\proguard-project.txt'.
+	at org.eclipse.core.internal.resources.File.create(File.java:145)
+	at org.eclipse.core.internal.resources.File.create(File.java:187)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.addLocalFile(NewProjectCreator.java:1368)
+	at com.android.ide.eclipse.adt.internal.wizards.templates.NewProjectWizard$2.populate(NewProjectWizard.java:310)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:759)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$1(NewProjectCreator.java:712)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$5.run(NewProjectCreator.java:914)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.create(NewProjectCreator.java:933)
+	at com.android.ide.eclipse.adt.internal.wizards.templates.NewProjectWizard.performFinish(NewProjectWizard.java:359)
+	at com.android.ide.eclipse.adt.internal.wizards.templates.TemplateWizard$1.run(TemplateWizard.java:201)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2015-02-05 20:54:52.158
+!MESSAGE A resource already exists on disk 'D:\adt_job\workspace\jMediaSplitPlayer\proguard-project.txt'.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:54:52.579
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:54:52.581
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_vertical_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:54:52.582
+!MESSAGE Warning: Ignoring name conflict in resource file for name navigation_drawer_width
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 20:54:52.586
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:33.812
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\background\JobScheduler\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:34.110
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\connectivity\CardReader\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:35.664
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\Camera2Basic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:35.889
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\MediaRouter\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:36.844
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\DisplayingBitmaps\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.110
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SlidingTabsBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.216
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshLayoutBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.274
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshListFragment\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.324
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshMultipleViews\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.441
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\Elevation\ElevationDrag\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.455
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\NavigationDrawer\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:37.463
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\RevealEffect\RevealEffectBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.635
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\background\JobScheduler\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.646
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\connectivity\CardReader\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.680
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\Camera2Basic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.685
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\MediaRouter\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.703
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\DisplayingBitmaps\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.710
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SlidingTabsBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.713
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshLayoutBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.716
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshListFragment\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.718
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshMultipleViews\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.723
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\Elevation\ElevationDrag\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.726
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\NavigationDrawer\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:26:40.728
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\RevealEffect\RevealEffectBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 21:27:58.433
+!MESSAGE Failed to load properties file for project 'ActionBarCompat_4_1'
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.682
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\background\JobScheduler\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.691
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\connectivity\CardReader\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.719
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\Camera2Basic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.724
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\MediaRouter\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.740
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\DisplayingBitmaps\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.747
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SlidingTabsBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.750
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshLayoutBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.752
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshListFragment\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.754
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshMultipleViews\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.759
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\Elevation\ElevationDrag\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.762
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\NavigationDrawer\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:28:49.764
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\RevealEffect\RevealEffectBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 21:29:07.329
+!MESSAGE Failed to load properties file for project 'AppNavigation_4_1'
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.154
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\background\JobScheduler\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.160
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\connectivity\CardReader\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.187
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\Camera2Basic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.192
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\MediaRouter\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.208
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\DisplayingBitmaps\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.214
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SlidingTabsBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.217
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshLayoutBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.219
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshListFragment\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.221
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshMultipleViews\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.226
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\Elevation\ElevationDrag\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.229
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\NavigationDrawer\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:21.232
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\RevealEffect\RevealEffectBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 21:31:32.311
+!MESSAGE Failed to load properties file for project 'tests'
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:58.949
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\background\JobScheduler\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:58.956
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\connectivity\CardReader\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:58.981
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\Camera2Basic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:58.986
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\media\MediaRouter\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.001
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\DisplayingBitmaps\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.008
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SlidingTabsBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.011
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshLayoutBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.014
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshListFragment\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.017
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\SwipeRefreshMultipleViews\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.023
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\Elevation\ElevationDrag\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.028
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\NavigationDrawer\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-02-05 21:31:59.031
+!MESSAGE NPW ignoring malformed manifest D:\adt\sdk\samples\android-21\ui\views\RevealEffect\RevealEffectBasic\Application\tests\AndroidManifest.xml
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 21:32:10.013
+!MESSAGE Failed to load properties file for project 'ApiDemos_4_1'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-02-05 21:32:11.162
+!MESSAGE Failed to load properties file for project 'ApiDemos_4_1'

@@ -10,6 +10,7 @@ import android.os.*;
 import android.widget.*;
 
 public class Shape extends Activity {
+	/*
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.shape);
@@ -64,4 +65,5 @@ public class Shape extends Activity {
 				0xff00ff00, 0xffff0000, TileMode.CLAMP));
 		btn.setBackground(sd3);
 	}
+	*/
 }
