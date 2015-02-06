@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="mCurrentSelectedPosition" key="selection"/>
-		<item value="true" key="casesensitive"/>
+		<item value="" key="selection"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
-		<item value="true" key="wholeword"/>
+		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="mCurrentSelectedPosition"/>
-			<item value="drawer_layout"/>
-			<item value="action_example"/>
-			<item value="descpanel"/>
-			<item value="mNowIndex"/>
-			<item value="PlanetInfo"/>
+			<item value="android.support.v4.view.PagerAdapter"/>
 			<item value="PlaceholderFragment"/>
-			<item value="AndExam_Application"/>
+			<item value="onCreateView"/>
+			<item value="TabContentFragment"/>
+			<item value="TabListener"/>
+			<item value="TabsPagerAdapter"/>
+			<item value="mViewPager"/>
+			<item value="drawer_layout"/>
 		</list>
 		<list key="replacehistory">
 		</list>
