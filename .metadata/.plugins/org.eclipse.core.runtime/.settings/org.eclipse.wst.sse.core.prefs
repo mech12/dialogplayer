@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=ApiDemos_2_2,ApiDemos_4_2_2,AndExam4_1,YT SDK String Library,android-filechooser,google-play-services_lib,YT-Downloader,video-trimmer,AndExam_Camera,AndExam_Memo,SettingsActivity,SoundEdit2,appcompat_v7,jMediaSplitPlayer
+task-tag-projects-already-scanned=ApiDemos_2_2,AndExam4_1,YT SDK String Library,android-filechooser,google-play-services_lib,YT-Downloader,video-trimmer,AndExam_Camera,AndExam_Memo,SettingsActivity,SoundEdit2,appcompat_v7,ApiDemos_4_1,Test_ActionBar,Test_TabsWithSwipeGesture,Test_ViewPager,Test_YouTubeAndroidAPIDemo,jinju_NaviDraw,jinju_tab_pager,jinju_v0.0.1,library
