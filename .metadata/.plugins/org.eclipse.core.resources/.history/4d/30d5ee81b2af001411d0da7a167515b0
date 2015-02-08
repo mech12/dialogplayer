@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">jinju_v0.0.2</string>
+
+    <string name="tab_popular">Popular</string>
+    <string name="tab_recent">Recent</string>
+    <string name="tab_favorite">Favorite</string>
+    <string name="tab_myfile">My File</string>
+    <string name="tab_myjob">My Job</string>
+    <string name="tab_search">Search</string>
+    
+    <string name="hello_world">Hello MSP</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

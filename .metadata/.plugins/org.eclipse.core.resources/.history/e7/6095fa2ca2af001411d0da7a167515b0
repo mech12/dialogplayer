@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">jinju_v0.0.2</string>
+    <string name="title_popular">Popular</string>
+    <string name="title_section2">Recent</string>
+    <string name="title_section3">Favorite</string>
+    <string name="hello_world">Hello MSP</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
