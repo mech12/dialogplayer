@@ -322,6 +322,7 @@ int layout fragmenttab2 0x7f030019
 int layout sherlock_spinner_dropdown_item 0x7f03001a
 int layout sherlock_spinner_item 0x7f03001b
 int layout viewpager_main 0x7f03001c
+int layout viewpager_main_home 0x7f03001d
 int menu activity_main 0x7f0b0000
 int string Fragment1 0x7f09000d
 int string FragmentTab1 0x7f09000e

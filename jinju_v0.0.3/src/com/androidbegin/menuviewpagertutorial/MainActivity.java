@@ -107,7 +107,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 		if (savedInstanceState == null) {
-			selectItem(0);
+			selectItem(0);// side 메뉴의 디펄트 세팅
 		}
 	}
 

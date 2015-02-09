@@ -7,7 +7,7 @@
 	<item value="filter_imports;" key="filters_last_used"/>
 	<section name="RefactoringWizard.preview">
 		<item value="470" key="width"/>
-		<item value="265" key="height"/>
+		<item value="245" key="height"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="true" key="renameSubpackages"/>
@@ -29,22 +29,10 @@
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="JavaSearchPage">
-		<item value="4" key="HISTORY_SIZE"/>
+		<item value="7" key="HISTORY_SIZE"/>
 		<item value="false" key="CASE_SENSITIVE"/>
 		<item value="15" key="INCLUDE_MASK"/>
-		<section name="HISTORY2">
-			<item value="false" key="isCaseSensitive"/>
-			<item value="" key="javaElement"/>
-			<item value="3" key="scope"/>
-			<item value="11" key="includeMask"/>
-			<item value="addTab" key="pattern"/>
-			<item value="2" key="limitTo"/>
-			<item value="0" key="matchLocations"/>
-			<item value="1" key="searchFor"/>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY3">
+		<section name="HISTORY6">
 			<item value="false" key="isCaseSensitive"/>
 			<item value="" key="javaElement"/>
 			<item value="0" key="scope"/>
@@ -56,7 +44,43 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY0">
+		<section name="HISTORY4">
+			<item value="false" key="isCaseSensitive"/>
+			<item value="" key="javaElement"/>
+			<item value="0" key="scope"/>
+			<item value="15" key="includeMask"/>
+			<item value="ActionBar.TabListener" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="0" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY5">
+			<item value="false" key="isCaseSensitive"/>
+			<item value="" key="javaElement"/>
+			<item value="3" key="scope"/>
+			<item value="11" key="includeMask"/>
+			<item value="addTab" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="1" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY2">
+			<item value="true" key="isCaseSensitive"/>
+			<item value="=Test_ActionBarSherlock_demo/src&lt;com.actionbarsherlock.sample.demos{SearchViews.java[SearchViews" key="javaElement"/>
+			<item value="3" key="scope"/>
+			<item value="15" key="includeMask"/>
+			<item value="com.actionbarsherlock.sample.demos.SearchViews" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="0" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY3">
 			<item value="false" key="isCaseSensitive"/>
 			<item value="" key="javaElement"/>
 			<item value="0" key="scope"/>
@@ -68,12 +92,24 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY1">
-			<item value="false" key="isCaseSensitive"/>
-			<item value="" key="javaElement"/>
-			<item value="0" key="scope"/>
+		<section name="HISTORY0">
+			<item value="true" key="isCaseSensitive"/>
+			<item value="=jinju_v0.0.3/src&lt;com.androidbegin.menuviewpagertutorial{ViewPagerAdapter_home.java[ViewPagerAdapter_home" key="javaElement"/>
+			<item value="3" key="scope"/>
 			<item value="15" key="includeMask"/>
-			<item value="ActionBar.TabListener" key="pattern"/>
+			<item value="com.androidbegin.menuviewpagertutorial.ViewPagerAdapter_home" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="0" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item value="true" key="isCaseSensitive"/>
+			<item value="=jinju_v0.0.3/src&lt;com.androidbegin.menuviewpagertutorial{FragmentTab_Search.java[FragmentTab_Search" key="javaElement"/>
+			<item value="3" key="scope"/>
+			<item value="15" key="includeMask"/>
+			<item value="com.androidbegin.menuviewpagertutorial.FragmentTab_Search" key="pattern"/>
 			<item value="2" key="limitTo"/>
 			<item value="0" key="matchLocations"/>
 			<item value="0" key="searchFor"/>

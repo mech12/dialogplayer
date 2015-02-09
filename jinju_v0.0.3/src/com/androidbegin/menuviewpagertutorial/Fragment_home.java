@@ -9,18 +9,27 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.actionbarsherlock.app.*;
 
-public class Fragment_home extends SherlockFragment {
+public class Fragment_home extends SherlockFragment 
+{
+	//private ActionBar actionBar ;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.viewpager_main, container, false);
+
+
+		View view = inflater.inflate(R.layout.viewpager_main_home, container, false);
 		// Locate the ViewPager in viewpager_main.xml
 		ViewPager mViewPager = (ViewPager) view.findViewById(R.id.viewPager);
 		// Set the ViewPagerAdapter_home into ViewPager
 		mViewPager.setAdapter(new ViewPagerAdapter_home(getChildFragmentManager()));
 		mViewPager.setCurrentItem(1);
+		
+		//ActionBar actionBar = ((MainActivity)getActivity()).getSupportActionBar();
+		
+				
 		return view;
 	}
 
