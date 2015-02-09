@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\adt-job\\workspace\\dialogplayer\\AndExam4_1\\src\\andexam\\ver4_1\\c30_service\\ICalc.aidl
+ * Original file: D:\\adt_job\\workspace\\AndExam4_1\\src\\andexam\\ver4_1\\c30_service\\ICalc.aidl
  */
 package andexam.ver4_1.c30_service;
 public interface ICalc extends android.os.IInterface

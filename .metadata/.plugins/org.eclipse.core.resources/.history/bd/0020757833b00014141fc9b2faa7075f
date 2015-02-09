@@ -1,0 +1,51 @@
+package com.androidbegin.menuviewpagertutorial;
+
+import com.wecandoit.jinju_0_0_3.*;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+public class ViewPagerAdapter_home extends FragmentPagerAdapter {
+
+	// Declare the number of ViewPager pages
+	private String titles[] = new String[] { 
+			"Recent", 
+			"Popular",
+			"Favorite",
+			"Search",
+			};
+
+	public ViewPagerAdapter_home(FragmentManager fm) {
+		super(fm);
+	}
+
+	@Override
+	public Fragment getItem(int position) {
+		switch (position) {
+		case 0:
+			FragmentTab_Popular l= new FragmentTab_Popular();
+			return l;
+		case 1:
+			FragmentTab_Recent w= new FragmentTab_Recent();
+			return w;
+		case 2:
+			FragmentTab_Favorite f= new FragmentTab_Favorite();
+			return f;
+		case 3:
+			FragmentTab_Search s= new FragmentTab_Search();
+			return s;
+		}
+		return null;
+	}
+
+	public CharSequence getPageTitle(int position) {
+		return titles[position];
+	}
+
+	@Override
+	public int getCount() {
+		return titles.length;
+	}
+
+}

@@ -1,3 +1,5 @@
+//http://viewpagerindicator.com/
+
 package com.viewpagerindicator.sample;
 
 import java.util.Random;

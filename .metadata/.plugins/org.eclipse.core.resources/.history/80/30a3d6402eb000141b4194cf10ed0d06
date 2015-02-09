@@ -1,0 +1,51 @@
+package com.androidbegin.menuviewpagertutorial;
+
+import com.wecandoit.jinju_0_0_3.*;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+public class ViewPagerAdapter_myfile extends FragmentPagerAdapter {
+
+	// Declare the number of ViewPager pages
+	private String titles[] = new String[] { 
+			"Local",
+			"Working", 
+			"Favorite",
+			};
+
+	public ViewPagerAdapter_myfile(FragmentManager fm) {
+		super(fm);
+	}
+
+	@Override
+	public Fragment getItem(int position) {
+		switch (position) {
+
+			// Open FragmentTab_Local.java
+		case 0:
+			FragmentTab_Local fragmenttab1 = new FragmentTab_Local();
+			return fragmenttab1;
+
+			// Open FragmentTab2.java
+		case 1:
+			FragmentTab2 fragmenttab2 = new FragmentTab2();
+			return fragmenttab2;
+		case 2:
+			FragmentTab2 fragmenttab3 = new FragmentTab2();
+			return fragmenttab3;
+		}
+		return null;
+	}
+
+	public CharSequence getPageTitle(int position) {
+		return titles[position];
+	}
+
+	@Override
+	public int getCount() {
+		return titles.length;
+	}
+
+}
