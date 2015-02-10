@@ -8,25 +8,25 @@ package com.wecandoit.jinju_mech_lib;
 
 public final class R {
 	public static final class drawable {
-		public static final int ic_launcher = 0x7f02006c;
+		public static final int ic_launcher = 0x7f020087;
 	}
 	public static final class id {
-		public static final int item_detail = 0x7f0a002f;
-		public static final int item_detail_container = 0x7f0a0027;
-		public static final int item_list = 0x7f0a0028;
+		public static final int item_detail = 0x7f08003a;
+		public static final int item_detail_container = 0x7f080032;
+		public static final int item_list = 0x7f080033;
 	}
 	public static final class layout {
-		public static final int activity_item_detail = 0x7f030014;
-		public static final int activity_item_list = 0x7f030015;
-		public static final int activity_item_twopane = 0x7f030016;
-		public static final int fragment_item_detail = 0x7f03001a;
+		public static final int activity_item_detail = 0x7f030015;
+		public static final int activity_item_list = 0x7f030016;
+		public static final int activity_item_twopane = 0x7f030017;
+		public static final int fragment_item_detail = 0x7f03001b;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f040000;
-		public static final int title_item_detail = 0x7f040001;
+		public static final int app_name = 0x7f09000d;
+		public static final int title_item_detail = 0x7f09000e;
 	}
 	public static final class style {
-		public static final int AppBaseTheme = 0x7f050000;
-		public static final int AppTheme = 0x7f050001;
+		public static final int AppBaseTheme = 0x7f0a0059;
+		public static final int AppTheme = 0x7f0a005a;
 	}
 }
