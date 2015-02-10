@@ -1,0 +1,9 @@
+<resources>
+ 
+    <string name="app_name">ActionBarSherlock Tutorial</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="ActionBarSherlock">ActionBarSherlock Tutorial</string>
+     <string name="action_settings">Settings</string>
+    
+</resources>

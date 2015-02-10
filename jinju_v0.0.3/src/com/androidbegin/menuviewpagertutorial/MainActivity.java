@@ -1,22 +1,31 @@
 package com.androidbegin.menuviewpagertutorial;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.*;
+import com.actionbarsherlock.widget.*;
 import com.wecandoit.jinju_0_0_3.R;
+import com.wecandoit.jinju_mech_lib.*;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
 import android.content.res.Configuration;
+import android.database.*;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.*;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.v4.view.GravityCompat;
 
 public class MainActivity extends SherlockFragmentActivity {
+    public static int THEME = R.style.Theme_Sherlock;
+	private final String TAG = "jinju_v0.0.2::MainActivity";
+	public static ClientThread jLog;
+    
 
 	// Declare Variables
 	DrawerLayout mDrawerLayout;
@@ -30,12 +39,22 @@ public class MainActivity extends SherlockFragmentActivity {
 	Fragment fragment_myfile = new Fragment_myfile();
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
+	
+	MenuItem mSearch;
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		// Get the view from drawer_main.xml
 		setContentView(R.layout.drawer_main);
+		
+		String ip = "logio.test.clipeo.com", port = "28177";
+		jLog = new ClientThread("jinju", ip, port);
+		new Thread(jLog).start();
+		Log.d(TAG, "jLog is start!!");
+
 
 		// Get the Title
 		mTitle = mDrawerTitle = getTitle();
@@ -109,7 +128,23 @@ public class MainActivity extends SherlockFragmentActivity {
 		if (savedInstanceState == null) {
 			selectItem(0);// side 메뉴의 디펄트 세팅
 		}
+		
+		if (jLog.isConnect) {
+			String str = String.format("jLog is connected : %s : %s", ip, port);
+			Log.d(TAG, str);
+			jLog.d(str);
+		}
+		
 	}
+	
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		//inflater.inflate(R.menu.activity_main_actions, menu);
+    	
+        return true;
+    }
+	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

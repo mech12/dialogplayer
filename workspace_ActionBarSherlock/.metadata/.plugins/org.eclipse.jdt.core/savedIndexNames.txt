@@ -1,0 +1,10 @@
+INDEX VERSION 1.126+D:\adt_job\workspace\workspace_ActionBarSherlock\.metadata\.plugins\org.eclipse.jdt.core
+3110326316.index
+2191077673.index
+2461443436.index
+3167148130.index
+269940700.index
+3793107878.index
+3168842971.index
+2573082473.index
+4140935226.index

@@ -1,6 +1,5 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1375056546000 271754 53307dc2bd2b69fd5533458ee11885f55807de4b D:\adt_job\workspace\test\JakeWharton-ActionBarSherlock-5a15d92\actionbarsherlock\libs\android-support-v4.jar
-1347408536000 271754 53307dc2bd2b69fd5533458ee11885f55807de4b D:\adt_job\workspace\Test_ViewPager_library\libs\android-support-v4.jar
 1369449348000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 D:\adt_job\workspace\jinju_v0.0.3_lib_ABS\libs\android-support-v4.jar
+1423566083539 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 D:\adt_job\workspace\jinju_mech_lib\libs\android-support-v4.jar

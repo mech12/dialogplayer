@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;mTag&apos; in &apos;com.wecandoit.jinju_mech_lib.ClientThread&apos; to &apos;mAppTag&apos;&#x0D;&#x0A;- Original project: &apos;jinju_mech_lib&apos;&#x0D;&#x0A;- Original element: &apos;com.wecandoit.jinju_mech_lib.ClientThread.mTag&apos;&#x0D;&#x0A;- Renamed element: &apos;com.wecandoit.jinju_mech_lib.ClientThread.mAppTag&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;mTag&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.wecandoit.jinju_mech_lib{ClientThread.java[ClientThread^mTag" name="mAppTag" references="true" setter="false" stamp="1423567905747" textual="true" version="1.0"/>
+</session>

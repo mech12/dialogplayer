@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="fragment_myfile" key="selection"/>
+		<item value="jLog" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Fragment_myfile"/>
-			<item value="fragment_myfile"/>
-			<item value="pagerTabStrip"/>
-			<item value="mIndicator"/>
-			<item value="fragment_home"/>
-			<item value="Fragment_home"/>
-			<item value="getSupportActionBar()"/>
-			<item value="ViewPagerAdapter_myfile"/>
+			<item value="jLog"/>
+			<item value="mSearch"/>
+			<item value="mClientThread"/>
+			<item value="Handler"/>
+			<item value="handler"/>
+			<item value="ClientThread"/>
+			<item value="sendHandler"/>
+			<item value="SampleList"/>
 		</list>
 		<list key="replacehistory">
 		</list>
