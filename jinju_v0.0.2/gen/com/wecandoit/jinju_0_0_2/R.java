@@ -43,15 +43,16 @@ public final class R {
         public static final int tab_search=0x7f020012;
     }
     public static final class id {
-        public static final int action_check_updates=0x7f080012;
-        public static final int action_help=0x7f080011;
-        public static final int action_location_found=0x7f08000f;
-        public static final int action_refresh=0x7f080010;
-        public static final int action_search=0x7f08000e;
-        public static final int action_settings=0x7f080013;
+        public static final int action_check_updates=0x7f080013;
+        public static final int action_help=0x7f080012;
+        public static final int action_location_found=0x7f080010;
+        public static final int action_refresh=0x7f080011;
+        public static final int action_search=0x7f08000f;
+        public static final int action_settings=0x7f080014;
         public static final int btncollapse=0x7f080008;
         public static final int btnexpand=0x7f080007;
-        public static final int imgIcon=0x7f08000c;
+        public static final int button1=0x7f08000c;
+        public static final int imgIcon=0x7f08000d;
         public static final int item_detail=0x7f08000a;
         public static final int item_detail_container=0x7f080001;
         public static final int item_list=0x7f080002;
@@ -59,7 +60,7 @@ public final class R {
         public static final int progressBar=0x7f080000;
         public static final int section_label=0x7f08000b;
         public static final int txtQuery=0x7f080009;
-        public static final int txtTitle=0x7f08000d;
+        public static final int txtTitle=0x7f08000e;
         public static final int txtresult=0x7f080005;
         public static final int txtsearch=0x7f080004;
         public static final int txtstatus=0x7f080006;

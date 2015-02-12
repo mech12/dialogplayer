@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wecandoit.jinju_0_0_4"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    
+    <application
+        android:hardwareAccelerated="true" 
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Sherlock" >
+        
+        
+        <!-- 
+        <activity android:label="@string/activity_name" android:name="com.actionbarsherlock.sample.demos.SampleList" android:theme="@style/Theme.Sherlock">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.wecandoit.jinju_0_0_4.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+             -->
+
+        <activity android:label="@string/activity_sample_code" android:name=".SampleList" android:theme="@style/Theme.Sherlock">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SendResult"/>
+        
+                <!-- Fragment Support Samples -->
+
+        <activity android:label="@string/fragment_alert_dialog_support" android:name=".FragmentAlertDialogSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_arguments_support" android:name=".FragmentArgumentsSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_custom_animation_support" android:name=".FragmentCustomAnimationSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_hide_show_support" android:name=".FragmentHideShowSupport" android:windowSoftInputMode="stateUnchanged">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_context_menu_support" android:name=".FragmentContextMenuSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_dialog_support" android:name=".FragmentDialogSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_dialog_or_activity_support" android:name=".FragmentDialogOrActivitySupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_layout_support" android:name=".FragmentLayoutSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_list_array_support" android:name=".FragmentListArraySupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".FragmentLayoutSupport$DetailsActivity"/>
+
+        <activity android:label="@string/fragment_menu_support" android:name=".FragmentMenuSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_retain_instance_support" android:name=".FragmentRetainInstanceSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_receive_result_support" android:name=".FragmentReceiveResultSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_stack_support" android:name=".FragmentStackSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_tabs" android:name=".FragmentTabs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_tabs_pager" android:name=".FragmentTabsPager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_pager_support" android:name=".FragmentPagerSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/fragment_state_pager_support" android:name=".FragmentStatePagerSupport">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.wecandoit.jinju_0_0_4.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+        
+        <!--  demo -->
+
+        <activity android:label="@string/action_items" android:name="com.actionbarsherlock.sample.demos.ActionItems">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/action_modes" android:name="com.actionbarsherlock.sample.demos.ActionModes">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/action_modes_no_action_bar" android:name="com.actionbarsherlock.sample.demos.ActionModesNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/action_providers" android:name="com.actionbarsherlock.sample.demos.ActionProviders">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/collapsible" android:name="com.actionbarsherlock.sample.demos.CollapsibleActionItem">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/context_menus" android:name="com.actionbarsherlock.sample.demos.ContextMenus">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/custom_navigation" android:name="com.actionbarsherlock.sample.demos.CustomNavigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/feature_toggles" android:name="com.actionbarsherlock.sample.demos.FeatureToggles">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/iprogress" android:name="com.actionbarsherlock.sample.demos.IndeterminateProgress">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/list_navigation" android:name="com.actionbarsherlock.sample.demos.ListNavigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/overlay" android:name="com.actionbarsherlock.sample.demos.Overlay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/preference" android:name="com.actionbarsherlock.sample.demos.Preference">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/progress" android:name="com.actionbarsherlock.sample.demos.Progress">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/search_views" android:name="com.actionbarsherlock.sample.demos.SearchViews">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/simple" android:name="com.actionbarsherlock.sample.demos.Simple">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/split" android:name="com.actionbarsherlock.sample.demos.SplitActionItems" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/share_action_providers" android:name="com.actionbarsherlock.sample.demos.ShareActionProviders">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/split_action_modes" android:name="com.actionbarsherlock.sample.demos.SplitActionModes" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/static_attach" android:name="com.actionbarsherlock.sample.demos.StaticAttachment">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/styled" android:name="com.actionbarsherlock.sample.demos.Styled" android:theme="@style/Theme.Styled" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/submenus" android:name="com.actionbarsherlock.sample.demos.SubMenus">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/tab_navigation" android:name="com.actionbarsherlock.sample.demos.TabNavigation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:label="@string/tab_navigation_collapsed" android:name="com.actionbarsherlock.sample.demos.TabNavigationCollapsed">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.actionbarsherlock.sample.demos.EXAMPLE"/>
+            </intent-filter>
+        </activity>        
+        
+        
+    </application>
+
+</manifest>

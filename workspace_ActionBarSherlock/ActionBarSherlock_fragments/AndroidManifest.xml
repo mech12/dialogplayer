@@ -16,7 +16,11 @@
      attribute brings in the Android platform namespace, and the package
      supplies a unique name for the application.  When writing your
      own application, the package name must be changed from "com.example.*"
-     to come from a domain that you own or have control over. --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="440" android:versionName="4.4.0" package="com.actionbarsherlock.sample.fragments">
+     to come from a domain that you own or have control over. -->
+     <manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+         android:versionCode="440" 
+         android:versionName="4.4.0" 
+         package="com.actionbarsherlock.sample.fragments">
 
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17"/>
 
@@ -24,7 +28,10 @@
 
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
 
-    <application android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/application_name">
+    <application 
+        android:hardwareAccelerated="true" 
+        android:icon="@drawable/icon" 
+        android:label="@string/application_name">
 
         <activity android:label="@string/activity_sample_code" android:name=".SampleList" android:theme="@style/Theme.Sherlock">
             <intent-filter>

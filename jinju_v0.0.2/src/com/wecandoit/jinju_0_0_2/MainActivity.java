@@ -3,6 +3,7 @@ package com.wecandoit.jinju_0_0_2;
 import java.util.*;
 
 import android.app.*;
+import android.app.ActionBar.Tab;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -45,7 +46,7 @@ public class MainActivity extends FragmentActivity implements
 	ViewPager mViewPager;
 
 	// action bar
-	private ActionBar actionBar;
+	private ActionBar mActionBar;
 	MenuItem mSearch;
 
 	@Override
@@ -59,8 +60,8 @@ public class MainActivity extends FragmentActivity implements
 		Log.d(TAG, "jLog is start!!");
 
 		// Set up the action bar.
-		actionBar = getActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		mActionBar = getActionBar();
+		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
@@ -77,7 +78,7 @@ public class MainActivity extends FragmentActivity implements
 				.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 					@Override
 					public void onPageSelected(int position) {
-						actionBar.setSelectedNavigationItem(position);
+						mActionBar.setSelectedNavigationItem(position);
 					}
 				});
 
@@ -87,12 +88,12 @@ public class MainActivity extends FragmentActivity implements
 			// the adapter. Also specify this Activity object, which implements
 			// the TabListener interface, as the callback (listener) for when
 			// this tab is selected.
-			actionBar.addTab(actionBar.newTab()
+			mActionBar.addTab(mActionBar.newTab()
 					// .setText(mSectionsPagerAdapter.getPageTitle(i))
 					.setIcon(mSectionsPagerAdapter.getPageIcon(i))
 					.setTabListener(this));
 		}
-		actionBar.setSelectedNavigationItem(tab_popular);
+		mActionBar.setSelectedNavigationItem(tab_popular);
 		if (jLog.isConnect) {
 			String str = String.format("jLog is connected : %s : %s", ip, port);
 			Log.d(TAG, str);
@@ -130,7 +131,7 @@ public class MainActivity extends FragmentActivity implements
 		sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 			public boolean onQueryTextSubmit(String query) {
 				jLog.d(query + "를 검색합니다.");
-				actionBar.setSelectedNavigationItem(tab_search);
+				mActionBar.setSelectedNavigationItem(tab_search);
 				return true;
 			}
 
@@ -295,6 +296,7 @@ public class MainActivity extends FragmentActivity implements
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,
 					false);
+			
 			return rootView;
 		}
 	}

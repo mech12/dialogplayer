@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="activityIntent" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="import com.wecandoit.jinju_0_0_3.R;"/>
-			<item value="com.wecandoit.jinju_0_0_3"/>
-			<item value="mDrawerToggle"/>
-			<item value="jLog"/>
-			<item value="mSearch"/>
-			<item value="mClientThread"/>
-			<item value="Handler"/>
-			<item value="handler"/>
+			<item value="EXAMPLE"/>
+			<item value="FragmentAlertDialogSupport"/>
+			<item value="FragmentAlterDialogSupport"/>
+			<item value="app_name"/>
+			<item value="SendResult"/>
+			<item value="activity_name"/>
+			<item value="activity_sample_code"/>
+			<item value="getItem"/>
 		</list>
 		<list key="replacehistory">
 			<item value="import com.wecandoit.jinju_0_0_4.R;"/>
@@ -26,7 +26,7 @@
 		<item value="267" key="DIALOG_WIDTH"/>
 		<item value="1|굴림|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|굴림" key="DIALOG_FONT_NAME"/>
 		<item value="350" key="DIALOG_HEIGHT"/>
-		<item value="-493" key="DIALOG_X_ORIGIN"/>
+		<item value="4" key="DIALOG_X_ORIGIN"/>
 		<item value="210" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

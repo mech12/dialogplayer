@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.androidbegin.menuviewpagertutorial.MainActivity" >
+    tools:context="com.wecandoit.jinju_0_0_4.MainActivity" >
 
     <item
         android:id="@+id/action_settings"
