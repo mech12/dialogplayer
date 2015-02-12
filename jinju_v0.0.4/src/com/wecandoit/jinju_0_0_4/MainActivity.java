@@ -1,6 +1,7 @@
 package com.wecandoit.jinju_0_0_4;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.sample.demos.*;
 import com.actionbarsherlock.view.*;
 import com.wecandoit.jinju_0_0_4.R;
 import com.wecandoit.jinju_mech_lib.*;
@@ -9,14 +10,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
 import android.app.*;
+import android.content.*;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.*;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.*;
 import android.support.v4.view.GravityCompat;
 
 public class MainActivity extends SherlockFragmentActivity {
@@ -132,12 +133,33 @@ public class MainActivity extends SherlockFragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// MenuInflater inflater = getMenuInflater();
-		// inflater.inflate(R.menu.activity_main_actions, menu);
 
+        boolean isLight = SampleList.THEME == R.style.Theme_Sherlock_Light;
+
+        menu.add("Search")
+	        .setIcon(isLight ? R.drawable.ic_search_inverse : R.drawable.ic_search)
+	        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+
+        menu.add("Demo")
+            .setIcon(isLight ? R.drawable.ic_compose_inverse : R.drawable.ic_compose)
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
+        menu.add("Fragment")
+	        .setIcon(isLight ? R.drawable.ic_iphone: R.drawable.ic_iphone)
+	        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+
+        menu.add("ApiDemo")
+        .setIcon(isLight ? R.drawable.app_adobe : R.drawable.app_adobe)
+        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+
+        menu.add("Setting")
+            .setIcon(isLight ? R.drawable.ic_refresh_inverse : R.drawable.ic_refresh)
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+		
 		return true;
 	}
 
+	final static int ACT_SEARCH = 0;
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -151,6 +173,34 @@ public class MainActivity extends SherlockFragmentActivity {
 				mDrawerLayout.openDrawer(mDrawerList);
 			}
 		}
+		CharSequence sTitle = item.getTitle();
+		if(sTitle == "Search")
+		{
+			Intent intent = new Intent(this, jSearchActivity.class);
+			intent.putExtra("tab", "Music");//현제 선택된 탭 카테고리를 기준으로 검색.
+			startActivityForResult(intent,ACT_SEARCH);
+		}
+		else if(sTitle == "Demo")
+		{
+			Intent intent = new Intent(this, com.actionbarsherlock.sample.demos.SampleList.class);
+			startActivity(intent);
+		}
+		else if(sTitle == "Fragment")
+		{
+			Intent intent = new Intent(this, com.actionbarsherlock.sample.fragments.SampleList.class);
+			startActivity(intent);
+		}
+		else if(sTitle == "ApiDemo")
+		{
+			Intent intent = new Intent(this, com.example.android.apis.ApiDemos.class);
+			startActivity(intent);
+		}
+		else if(sTitle == "Setting")
+		{
+			Intent intent = new Intent(this, jPreferenceActivity.class);
+			startActivity(intent);
+		}
+		jLog.d("Got click: " + sTitle);
 
 		return super.onOptionsItemSelected(item);
 	}
@@ -222,4 +272,16 @@ public class MainActivity extends SherlockFragmentActivity {
 			super.onBackPressed();
 		}
 	}
+	
+	@Override
+	protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+		switch (requestCode) {
+		case ACT_SEARCH:
+			if (resultCode == RESULT_OK) {
+				jLog.d(data.getStringExtra("SelectedURL"));
+			}
+			break;
+		}
+	}
+	
 }

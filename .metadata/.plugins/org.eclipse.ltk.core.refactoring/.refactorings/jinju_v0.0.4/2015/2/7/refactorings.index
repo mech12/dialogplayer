@@ -28,3 +28,28 @@
 1423649794983	Delete elements
 1423649797586	Delete elements
 1423649801083	Delete element
+1423713935659	Rename field 'searchView'
+1423714669989	Copy compilation unit
+1423714687537	Rename type 'CopyOfMainActivity'
+1423717628141	Copy compilation unit
+1423717778307	Rename type 'SearchViews'
+1423718020193	Rename type 'jSearchViews'
+1423719537490	Copy compilation unit
+1423719572092	Rename type 'Preference'
+1423720871880	Rename resource 'arrays.xml'
+1423721068913	Rename resource 'styles.xml'
+1423721075813	Rename resource 'themes.xml'
+1423721084348	Rename resource 'dimens.xml'
+1423721090724	Rename resource 'colors.xml'
+1423721096730	Rename resource 'attrs.xml'
+1423721105108	Rename resource 'AB_arrays.xml'
+1423722315411	Rename type 'LoaderThrottleSupport'
+1423722470743	Rename type 'LoaderThrottleSupport_apidemo'
+1423722737083	Rename type 'LoaderThrottle'
+1423722916229	Rename type 'SearchSuggestionSampleProvider'
+1423723104684	Rename type 'FileProvider'
+1423731606552	Rename resource 'Adobe.png'
+1423731647994	Rename resource 'iPhone.png'
+1423731655965	Rename resource 'iphone.png'
+1423731664106	Move file
+1423731822342	Rename resource 'ic_launcher-web.png'

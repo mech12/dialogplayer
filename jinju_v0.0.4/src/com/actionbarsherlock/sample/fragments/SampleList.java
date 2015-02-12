@@ -83,7 +83,7 @@ public class SampleList extends SherlockListActivity {
         List<Map<String, Object>> myData = new ArrayList<Map<String, Object>>();
 
         Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-        mainIntent.addCategory("com.actionbarsherlock.sample.fragments.EXAMPLE");
+        mainIntent.addCategory("com.actionbarsherlock.sample.fragments.EXAMPLE_smp");
 
         PackageManager pm = getPackageManager();
         List<ResolveInfo> list = pm.queryIntentActivities(mainIntent, 0);

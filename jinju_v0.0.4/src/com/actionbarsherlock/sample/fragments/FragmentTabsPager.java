@@ -58,7 +58,7 @@ public class FragmentTabsPager extends SherlockFragmentActivity {
         mTabsAdapter.addTab(mTabHost.newTabSpec("custom").setIndicator("Custom"),
                 LoaderCustomSupport.AppListFragment.class, null);
         mTabsAdapter.addTab(mTabHost.newTabSpec("throttle").setIndicator("Throttle"),
-                LoaderThrottleSupport.ThrottledLoaderListFragment.class, null);
+                LoaderThrottleSupport_fragment.ThrottledLoaderListFragment.class, null);
 
         if (savedInstanceState != null) {
             mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
