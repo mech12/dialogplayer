@@ -53,3 +53,18 @@
 1423731655965	Rename resource 'iphone.png'
 1423731664106	Move file
 1423731822342	Rename resource 'ic_launcher-web.png'
+1423734900712	Copy compilation unit
+1423734921840	Rename type 'VideoListDemoActivity'
+1423734979732	Rename type 'jYoutubeSearchListActivity'
+1423735020222	Rename type 'jPreferenceActivity'
+1423735041071	Rename type 'jSearchActivity'
+1423737017557	Copy compilation unit
+1423737122404	Delete element
+1423737892111	Copy compilation unit
+1423738054363	Delete element
+1423738106279	Copy compilation unit
+1423738346404	Copy file
+1423738488440	Move compilation unit
+1423738619917	Delete element
+1423738628515	Rename type 'jActivity_VideoListDemo'
+1423739196099	Rename local variable 'searchView'

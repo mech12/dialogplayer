@@ -9,4 +9,10 @@
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.app.ActionBar.Tab"/>
 <fullyQualifiedTypeName name="com.wecandoit.jinju_0_0_4.R"/>
+<fullyQualifiedTypeName name="java.lang.CharSequence"/>
+<fullyQualifiedTypeName name="com.actionbarsherlock.sample.demos.SampleList"/>
+<fullyQualifiedTypeName name="com.wecandoit.jsplitmediaplayer.R"/>
+<fullyQualifiedTypeName name="com.examples.youtubeapidemo.DeveloperKey"/>
+<fullyQualifiedTypeName name="com.actionbarsherlock.app.SherlockActivity"/>
+<fullyQualifiedTypeName name="android.os.AsyncTask"/>
 </qualifiedTypeNameHistroy>

@@ -19,9 +19,9 @@
 		<item value="false" key="REG_EX_SEARCH"/>
 		<item value="false" key="SEARCH_DERIVED"/>
 		<section name="HISTORY6">
-			<item value="true" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="fragment1" key="textPattern"/>
+			<item value="false" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="LoaderThrottle" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -30,9 +30,9 @@
 			</list>
 		</section>
 		<section name="HISTORY7">
-			<item value="true" key="ignoreCase"/>
+			<item value="false" key="ignoreCase"/>
 			<item value="3" key="scope"/>
-			<item value="jinju_v0.0.3_lib_ABS" key="textPattern"/>
+			<item value="LoaderThrottleSupport" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -41,9 +41,9 @@
 			</list>
 		</section>
 		<section name="HISTORY4">
-			<item value="true" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="android:name=&quot;." key="textPattern"/>
+			<item value="false" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="SuggestionProvider" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -52,20 +52,20 @@
 			</list>
 		</section>
 		<section name="HISTORY10">
-			<item value="true" key="ignoreCase"/>
+			<item value="false" key="ignoreCase"/>
 			<item value="3" key="scope"/>
-			<item value="pagerTabStrip" key="textPattern"/>
+			<item value="----------------------------------------------------------" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
-				<item value="*.xml"/>
+				<item value="*.*"/>
 			</list>
 			<list key="workingSets">
 			</list>
 		</section>
 		<section name="HISTORY5">
-			<item value="true" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="com.actionbarsherlock.sample.fragments" key="textPattern"/>
+			<item value="false" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="SearchSuggestionSampleProvider" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -75,24 +75,25 @@
 		</section>
 		<section name="EXTENSIONS">
 			<item value="*.*" key="0"/>
-			<item value="*.xml" key="1"/>
-			<item value="com.wecandoit.dailogplayer.lib" key="2"/>
+			<item value="*.java" key="1"/>
+			<item value="*.xml" key="2"/>
+			<item value="com.wecandoit.dailogplayer.lib" key="3"/>
 		</section>
 		<section name="HISTORY11">
-			<item value="true" key="ignoreCase"/>
+			<item value="false" key="ignoreCase"/>
 			<item value="3" key="scope"/>
-			<item value="PagerTabStrip" key="textPattern"/>
+			<item value="com.actionbarsherlock.sample.fragments.EXAMPLE" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
-				<item value="*.xml"/>
+				<item value="*.*"/>
 			</list>
 			<list key="workingSets">
 			</list>
 		</section>
 		<section name="HISTORY8">
-			<item value="true" key="ignoreCase"/>
+			<item value="false" key="ignoreCase"/>
 			<item value="3" key="scope"/>
-			<item value="com.androidbegin.menuviewpagertutorial" key="textPattern"/>
+			<item value="DraggableDot" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -101,20 +102,20 @@
 			</list>
 		</section>
 		<section name="HISTORY9">
-			<item value="true" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="&quot;현재 상태 : 축소됨&quot;" key="textPattern"/>
+			<item value="false" key="ignoreCase"/>
+			<item value="3" key="scope"/>
+			<item value="import com.example.android.apis.R;" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
-				<item value="*.*"/>
+				<item value="*.java"/>
 			</list>
 			<list key="workingSets">
 			</list>
 		</section>
 		<section name="HISTORY2">
 			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="LoaderThrottle" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="FileProvider_apidemo" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -123,9 +124,9 @@
 			</list>
 		</section>
 		<section name="HISTORY3">
-			<item value="true" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="FragmentAlterDialogSupport" key="textPattern"/>
+			<item value="false" key="ignoreCase"/>
+			<item value="0" key="scope"/>
+			<item value="FileProvider" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -136,7 +137,7 @@
 		<section name="HISTORY0">
 			<item value="false" key="ignoreCase"/>
 			<item value="3" key="scope"/>
-			<item value="com.actionbarsherlock.sample.demos.EXAMPLE" key="textPattern"/>
+			<item value="VideoListDemoActivity" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -146,8 +147,8 @@
 		</section>
 		<section name="HISTORY1">
 			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="LoaderThrottleSupport" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="import com.wecandoit.jsplitmediaplayer.R;" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -175,6 +176,8 @@
 	</section>
 	<section name="ReplaceDialog2">
 		<list key="replace_with">
+			<item value="import com.wecandoit.jinju_0_0_4.*;"/>
+			<item value="==========================================================="/>
 			<item value="com.wecandoit.jinju_0_0_4"/>
 		</list>
 	</section>

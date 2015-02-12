@@ -15,19 +15,9 @@
 			<location>D:/adt/sdk/sources/android-17</location>
 		</link>
 		<link>
-			<name>.link1</name>
-			<type>2</type>
-			<location>D:/adt/sdk/sources/android-17</location>
-		</link>
-		<link>
 			<name>.link2</name>
 			<type>2</type>
 			<location>D:/adt/sdk/sources/android-21</location>
-		</link>
-		<link>
-			<name>.link3</name>
-			<type>2</type>
-			<location>D:/adt/sdk/sources/android-18</location>
 		</link>
 		<link>
 			<name>.link4</name>

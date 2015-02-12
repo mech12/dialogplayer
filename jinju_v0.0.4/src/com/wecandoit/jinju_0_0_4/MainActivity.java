@@ -22,7 +22,6 @@ import android.support.v4.view.GravityCompat;
 
 public class MainActivity extends SherlockFragmentActivity {
 	private final String TAG = "jinju_v0.0.2::MainActivity";
-	public static ClientThread jLog;
 
 	// Declare Variables
 	DrawerLayout mDrawerLayout;
@@ -48,9 +47,9 @@ public class MainActivity extends SherlockFragmentActivity {
 		setContentView(R.layout.drawer_main);
 		
 		String ip = "logio.test.clipeo.com", port = "28177";
-		jLog = new ClientThread("jinju", ip, port);
-		new Thread(jLog).start();
-		Log.d(TAG, "jLog is start!!");
+		jG.Log = new ClientThread("jinju", ip, port);
+		new Thread(jG.Log).start();
+		Log.d(TAG, "jG.Log is start!!");
 
 		// Get the Title
 		mTitle = mDrawerTitle = getTitle();
@@ -101,16 +100,14 @@ public class MainActivity extends SherlockFragmentActivity {
 				R.string.drawer_close) {
 
 			public void onDrawerClosed(View view) {
-				// TODO Auto-generated method stub
-				jLog.d("onDrawerClosed");
+				jG.Log.d("onDrawerClosed");
 
 				super.onDrawerClosed(view);
 			}
 
 			public void onDrawerOpened(View drawerView) {
-				// TODO Auto-generated method stub
 				// Set the title on the action when drawer open
-				jLog.d("onDrawerOpened");
+				jG.Log.d("onDrawerOpened");
 				getSupportActionBar().setTitle(mDrawerTitle);
 				super.onDrawerOpened(drawerView);
 			}
@@ -122,10 +119,10 @@ public class MainActivity extends SherlockFragmentActivity {
 			selectItem(0);
 		}
 		
-		if (jLog.isConnect) {
+		if (jG.Log.isConnect) {
 			String str = String.format("jLog is connected : %s : %s", ip, port);
 			Log.d(TAG, str);
-			jLog.d(str);
+			jG.Log.d(str);
 		}
 
 
@@ -151,6 +148,11 @@ public class MainActivity extends SherlockFragmentActivity {
         menu.add("ApiDemo")
         .setIcon(isLight ? R.drawable.app_adobe : R.drawable.app_adobe)
         .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
+        menu.add("YouTube")
+        .setIcon(isLight ? R.drawable.stat_happy : R.drawable.stat_happy)
+        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
 
         menu.add("Setting")
             .setIcon(isLight ? R.drawable.ic_refresh_inverse : R.drawable.ic_refresh)
@@ -166,19 +168,28 @@ public class MainActivity extends SherlockFragmentActivity {
 		if (item.getItemId() == android.R.id.home) {
 
 			if (mDrawerLayout.isDrawerOpen(mDrawerList)) {
-				jLog.d("closeDrawer");
+				jG.Log.d("closeDrawer");
 				mDrawerLayout.closeDrawer(mDrawerList);
 			} else {
-				jLog.d("openDrawer");
+				jG.Log.d("openDrawer");
 				mDrawerLayout.openDrawer(mDrawerList);
 			}
 		}
 		CharSequence sTitle = item.getTitle();
 		if(sTitle == "Search")
 		{
-			Intent intent = new Intent(this, jSearchActivity.class);
+			/*
+			Intent intent = new Intent(this, com.wecandoit.jinju_0_0_4.jActivity_YoutubeSearchList.class);
+			//Intent intent = new Intent(this, com.wecandoit.jinju_0_0_4.jActivity_Search.class);
 			intent.putExtra("tab", "Music");//현제 선택된 탭 카테고리를 기준으로 검색.
 			startActivityForResult(intent,ACT_SEARCH);
+			
+			*/
+			
+		    Intent intent = new Intent();
+		    intent.setComponent(new ComponentName("com.wecandoit.jinju_0_0_4", "com.wecandoit.jinju_0_0_4.jActivity_YoutubeSearchList"));
+		    startActivity(intent);
+			
 		}
 		else if(sTitle == "Demo")
 		{
@@ -197,10 +208,16 @@ public class MainActivity extends SherlockFragmentActivity {
 		}
 		else if(sTitle == "Setting")
 		{
-			Intent intent = new Intent(this, jPreferenceActivity.class);
+			Intent intent = new Intent(this, com.wecandoit.jinju_0_0_4.jActivity_Preference.class);
 			startActivity(intent);
 		}
-		jLog.d("Got click: " + sTitle);
+		else if(sTitle == "YouTube")
+		{
+			Intent intent = new Intent(this, com.examples.youtubeapidemo.YouTubeAPIDemoActivity.class);
+			startActivity(intent);
+		}
+		
+		jG.Log.d("Got click: " + sTitle);
 
 		return super.onOptionsItemSelected(item);
 	}
@@ -278,7 +295,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		switch (requestCode) {
 		case ACT_SEARCH:
 			if (resultCode == RESULT_OK) {
-				jLog.d(data.getStringExtra("SelectedURL"));
+				jG.Log.d(data.getStringExtra("SelectedURL"));
 			}
 			break;
 		}

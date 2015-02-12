@@ -11,9 +11,9 @@ public final class R {
 		public static final int ic_launcher = 0x7f0200b0;
 	}
 	public static final class id {
-		public static final int item_detail = 0x7f0e00f9;
-		public static final int item_detail_container = 0x7f0e004f;
-		public static final int item_list = 0x7f0e0050;
+		public static final int item_detail = 0x7f0e00fa;
+		public static final int item_detail_container = 0x7f0e0050;
+		public static final int item_list = 0x7f0e0051;
 	}
 	public static final class layout {
 		public static final int activity_item_detail = 0x7f03001f;
