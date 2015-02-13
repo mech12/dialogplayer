@@ -52,16 +52,24 @@ public class MainActivity extends SherlockFragmentActivity {
 		Log.d(TAG, "jG.Log is start!!");
 
 		// Get the Title
-		mTitle = mDrawerTitle = getTitle();
+		mDrawerTitle = getTitle();
+		mTitle = "SMP/";
 
 		// Generate title
-		title = new String[] { getString(R.string.side_home),
+		title = new String[] { 
+				getString(R.string.side_home),
 				getString(R.string.side_myfile),
-				getString(R.string.side_dialog),
-				getString(R.string.side_music), getString(R.string.side_dance), };
+				getString(R.string.side_speach),
+				getString(R.string.side_music), 
+				getString(R.string.side_dance), };
 		// Generate subtitle
-		subtitle = title;// new String[] { "Subtitle Fragment 1",
-							// "Subtitle Fragment 2" };
+		subtitle = new String[] { 
+				"",
+				"로컬에 저장된 나의 파일목록",
+				"인기 연설및 대화 동영상",
+				"따라 부르세요",
+				"따라 하세요.",
+				};
 
 		// Generate icon
 		icon = new int[] { R.drawable.side_home, R.drawable.side_myfile,
@@ -153,6 +161,11 @@ public class MainActivity extends SherlockFragmentActivity {
         .setIcon(isLight ? R.drawable.stat_happy : R.drawable.stat_happy)
         .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         
+        
+        menu.add("YTSDK")
+        .setIcon(isLight ? R.drawable.yt_ic_launcher : R.drawable.yt_ic_launcher)
+        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
 
         menu.add("Setting")
             .setIcon(isLight ? R.drawable.ic_refresh_inverse : R.drawable.ic_refresh)
@@ -165,6 +178,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
+		jG.Log.d("onOptionsItemSelected = " + item.getTitle());
 		if (item.getItemId() == android.R.id.home) {
 
 			if (mDrawerLayout.isDrawerOpen(mDrawerList)) {
@@ -190,6 +204,11 @@ public class MainActivity extends SherlockFragmentActivity {
 		    intent.setComponent(new ComponentName("com.wecandoit.jinju_0_0_4", "com.wecandoit.jinju_0_0_4.jActivity_YoutubeSearchList"));
 		    startActivity(intent);
 			
+		}
+		else if(sTitle == "YTSDK")
+		{
+			Intent intent = new Intent(this, com.yt.activities.SplashActivity.class);
+			startActivity(intent);
 		}
 		else if(sTitle == "Demo")
 		{

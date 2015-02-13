@@ -74,7 +74,7 @@ public class MainActivity_with_SearchView extends SherlockFragmentActivity imple
 		// Generate title
 		title = new String[] { getString(R.string.side_home),
 				getString(R.string.side_myfile),
-				getString(R.string.side_dialog),
+				getString(R.string.side_speach),
 				getString(R.string.side_music), getString(R.string.side_dance), };
 		// Generate subtitle
 		subtitle = title;// new String[] { "Subtitle Fragment 1",

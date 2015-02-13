@@ -68,3 +68,9 @@
 1423738619917	Delete element
 1423738628515	Rename type 'jActivity_VideoListDemo'
 1423739196099	Rename local variable 'searchView'
+1423806204218	Delete element
+1423807685121	Rename field 'side_dialog'
+1423811595729	Move packages
+1423811790713	Delete elements
+1423815042662	Move compilation unit
+1423815155999	Move compilation unit

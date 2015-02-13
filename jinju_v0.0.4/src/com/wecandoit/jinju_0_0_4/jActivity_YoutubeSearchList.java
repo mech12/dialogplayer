@@ -335,14 +335,12 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		static {
 			List<VideoEntry> list = new ArrayList<VideoEntry>();
 			list.add(new VideoEntry("YouTube Collection", "Y_UmWdcTrrc"));
-			/*
 			list.add(new VideoEntry("GMail Tap", "1KhZKNZO8mQ"));
 			list.add(new VideoEntry("Chrome Multitask", "UiLSiqyDf4Y"));
 			list.add(new VideoEntry("Google Fiber", "re0VRK6ouwI"));
 			list.add(new VideoEntry("Autocompleter", "blB_X38YSxQ"));
 			list.add(new VideoEntry("GMail Motion", "Bu927_ul_X0"));
 			list.add(new VideoEntry("Translate for Animals", "3I24bSteJpw"));
-			*/
 			VIDEO_LIST = Collections.unmodifiableList(list);
 		}
 
@@ -625,6 +623,12 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		params.height = height;
 		params.gravity = gravity;
 		view.setLayoutParams(params);
+	}
+	
+	
+	void searchYoutube()
+	{
+		//http://stackoverflow.com/questions/21914165/how-to-search-videos-with-youtube-data-api-in-android		
 	}
 
 }

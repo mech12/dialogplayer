@@ -33,7 +33,9 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:singleLine="true"
-            android:textAppearance="?attr/textAppearanceSmall" />
+            android:textAppearance="?attr/textAppearanceSmall"
+            android:textSize="10sp" />
+
     </LinearLayout>
  
 </LinearLayout>

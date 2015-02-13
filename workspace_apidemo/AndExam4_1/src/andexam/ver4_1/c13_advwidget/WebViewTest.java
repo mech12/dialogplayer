@@ -18,7 +18,7 @@ public class WebViewTest extends Activity {
 		WebSettings set = mWeb.getSettings();
 		set.setJavaScriptEnabled(true);
 		set.setBuiltInZoomControls(true);
-		mWeb.loadUrl("http://www.google.com");
+		mWeb.loadUrl("https://www.youtube.com/results?search_query=twerk");
 	}
 
 	public void mOnClick(View v) {

@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Layout" key="selection"/>
+		<item value="share" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Layout"/>
-			<item value="layout"/>
-			<item value="ListFragment"/>
-			<item value="listFragment"/>
-			<item value="VideoListFragment"/>
-			<item value="setSearchableInfo"/>
-			<item value="setIconified"/>
-			<item value="setIconifiedByDefault"/>
+			<item value="Share"/>
+			<item value="startHomePageActivity();"/>
+			<item value="startHomePageActivity"/>
+			<item value="Utils"/>
+			<item value="utils"/>
+			<item value="INMOBI_AD_ID"/>
+			<item value="APPLICATION_ID"/>
+			<item value="YTSDK"/>
 		</list>
 		<list key="replacehistory">
 			<item value="import com.wecandoit.jinju_0_0_4.R;"/>

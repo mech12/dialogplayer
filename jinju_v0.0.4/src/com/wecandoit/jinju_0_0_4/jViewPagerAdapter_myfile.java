@@ -13,7 +13,7 @@ public class jViewPagerAdapter_myfile extends FragmentPagerAdapter {
 			"Local",
 			"Working", 
 			"Favorite",
-			"Search",
+			//"Search",
 			};
 
 	public jViewPagerAdapter_myfile(FragmentManager fm) {
@@ -29,8 +29,8 @@ public class jViewPagerAdapter_myfile extends FragmentPagerAdapter {
 			return new FragmentTab_Working();
 		case 2:
 			return new FragmentTab_Favorite();
-		case 3:
-			return new FragmentTab_Search();
+		//case 3:
+			//return new FragmentTab_Search();
 		}
 		return null;
 	}

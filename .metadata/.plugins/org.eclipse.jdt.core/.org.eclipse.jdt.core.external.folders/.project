@@ -10,19 +10,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.link0</name>
-			<type>2</type>
-			<location>D:/adt/sdk/sources/android-17</location>
-		</link>
-		<link>
 			<name>.link2</name>
 			<type>2</type>
 			<location>D:/adt/sdk/sources/android-21</location>
 		</link>
 		<link>
-			<name>.link4</name>
+			<name>.link3</name>
 			<type>2</type>
-			<location>D:/adt/sdk/sources/android-19</location>
+			<location>D:/adt/sdk/sources/android-18</location>
 		</link>
 		<link>
 			<name>.link6</name>

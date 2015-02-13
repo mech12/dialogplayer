@@ -13,7 +13,7 @@ public class jViewPagerAdapter_home extends FragmentPagerAdapter {
 			"Recent", 
 			"Popular",
 			"Favorite",
-			"Search",
+			//"Search",
 			};
 
 	public jViewPagerAdapter_home(FragmentManager fm) {

@@ -15,13 +15,13 @@
 	</section>
 	<section name="TextSearchPage">
 		<item value="12" key="HISTORY_SIZE"/>
-		<item value="true" key="CASE_SENSITIVE"/>
+		<item value="false" key="CASE_SENSITIVE"/>
 		<item value="false" key="REG_EX_SEARCH"/>
 		<item value="false" key="SEARCH_DERIVED"/>
 		<section name="HISTORY6">
 			<item value="false" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="LoaderThrottle" key="textPattern"/>
+			<item value="3" key="scope"/>
+			<item value="VideoListDemoActivity" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -31,8 +31,8 @@
 		</section>
 		<section name="HISTORY7">
 			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="LoaderThrottleSupport" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="import com.wecandoit.jsplitmediaplayer.R;" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -43,7 +43,7 @@
 		<section name="HISTORY4">
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
-			<item value="SuggestionProvider" key="textPattern"/>
+			<item value="STARTAPP_FULL_SCREEN_ADS" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -53,8 +53,8 @@
 		</section>
 		<section name="HISTORY10">
 			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="----------------------------------------------------------" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="SuggestionProvider" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -64,8 +64,8 @@
 		</section>
 		<section name="HISTORY5">
 			<item value="false" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="SearchSuggestionSampleProvider" key="textPattern"/>
+			<item value="3" key="scope"/>
+			<item value="YouTube.Builder" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -81,8 +81,8 @@
 		</section>
 		<section name="HISTORY11">
 			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="com.actionbarsherlock.sample.fragments.EXAMPLE" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="SearchSuggestionSampleProvider" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -91,28 +91,6 @@
 			</list>
 		</section>
 		<section name="HISTORY8">
-			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="DraggableDot" key="textPattern"/>
-			<item value="false" key="isRegExSearch"/>
-			<list key="fileNamePatterns">
-				<item value="*.*"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY9">
-			<item value="false" key="ignoreCase"/>
-			<item value="3" key="scope"/>
-			<item value="import com.example.android.apis.R;" key="textPattern"/>
-			<item value="false" key="isRegExSearch"/>
-			<list key="fileNamePatterns">
-				<item value="*.java"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY2">
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="FileProvider_apidemo" key="textPattern"/>
@@ -123,7 +101,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY3">
+		<section name="HISTORY9">
 			<item value="false" key="ignoreCase"/>
 			<item value="0" key="scope"/>
 			<item value="FileProvider" key="textPattern"/>
@@ -134,10 +112,32 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY0">
+		<section name="HISTORY2">
 			<item value="false" key="ignoreCase"/>
 			<item value="3" key="scope"/>
-			<item value="VideoListDemoActivity" key="textPattern"/>
+			<item value="adView" key="textPattern"/>
+			<item value="false" key="isRegExSearch"/>
+			<list key="fileNamePatterns">
+				<item value="*.*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY3">
+			<item value="false" key="ignoreCase"/>
+			<item value="3" key="scope"/>
+			<item value="import com.ytsdk.testapp.mbc.R;" key="textPattern"/>
+			<item value="false" key="isRegExSearch"/>
+			<list key="fileNamePatterns">
+				<item value="*.*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY0">
+			<item value="true" key="ignoreCase"/>
+			<item value="3" key="scope"/>
+			<item value="imageloader" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
@@ -147,8 +147,8 @@
 		</section>
 		<section name="HISTORY1">
 			<item value="false" key="ignoreCase"/>
-			<item value="0" key="scope"/>
-			<item value="import com.wecandoit.jsplitmediaplayer.R;" key="textPattern"/>
+			<item value="3" key="scope"/>
+			<item value="Failed to bind to service" key="textPattern"/>
 			<item value="false" key="isRegExSearch"/>
 			<list key="fileNamePatterns">
 				<item value="*.*"/>
