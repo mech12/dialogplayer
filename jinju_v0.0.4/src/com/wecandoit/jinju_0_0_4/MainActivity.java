@@ -247,6 +247,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
+			jG.Log.d("Drawer Menu: " + position);
 			selectItem(position);
 		}
 	}

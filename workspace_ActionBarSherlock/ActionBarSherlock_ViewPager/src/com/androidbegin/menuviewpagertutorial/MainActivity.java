@@ -2,6 +2,7 @@ package com.androidbegin.menuviewpagertutorial;
  
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.wecandoit.jinju_mech_lib.*;
  
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,6 +11,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.*;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -17,6 +19,7 @@ import android.support.v4.view.GravityCompat;
  
 public class MainActivity extends SherlockFragmentActivity {
  
+	private final String TAG = "SherlockFragmentActivity::MainActivity";
 	// Declare Variables
 	DrawerLayout mDrawerLayout;
 	ListView mDrawerList;
@@ -35,6 +38,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 		// Get the view from drawer_main.xml
 		setContentView(R.layout.drawer_main);
+		
+		String ip = "logio.test.clipeo.com", port = "28177";
+		jG.Log = new ClientThread("jinju", ip, port);
+		new Thread(jG.Log).start();
+		Log.d(TAG, "jG.Log is start!!");
+
  
 		// Get the Title
 		mTitle = mDrawerTitle = getTitle();
