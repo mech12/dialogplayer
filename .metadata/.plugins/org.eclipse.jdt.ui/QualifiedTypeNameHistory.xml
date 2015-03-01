@@ -16,4 +16,5 @@
 <fullyQualifiedTypeName name="com.actionbarsherlock.app.SherlockActivity"/>
 <fullyQualifiedTypeName name="android.os.AsyncTask"/>
 <fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.app.ActionBar"/>
 </qualifiedTypeNameHistroy>

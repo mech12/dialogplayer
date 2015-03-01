@@ -1,5 +1,5 @@
 package com.wecandoit.jinju_0_0_4;
-
+import com.actionbarsherlock.app.*;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.sample.demos.*;
 import com.actionbarsherlock.view.*;
@@ -9,7 +9,6 @@ import com.wecandoit.jinju_mech_lib.*;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
-import android.app.*;
 import android.content.*;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ import android.widget.*;
 import android.support.v4.view.GravityCompat;
 
 public class MainActivity extends SherlockFragmentActivity {
-	private final String TAG = "jinju_v0.0.2::MainActivity";
+	private final String TAG = "jinju_v0.0.4::MainActivity";
 
 	// Declare Variables
 	DrawerLayout mDrawerLayout;
@@ -88,8 +87,7 @@ public class MainActivity extends SherlockFragmentActivity {
 				GravityCompat.START);
 
 		// Pass string arrays to jNaviDraw_MenuListAdapter
-		mMenuAdapter = new jNaviDraw_MenuListAdapter(MainActivity.this, title,
-				subtitle, icon);
+		mMenuAdapter = new jNaviDraw_MenuListAdapter(MainActivity.this, title, subtitle, icon);
 
 		// Set the jNaviDraw_MenuListAdapter to the ListView
 		mDrawerList.setAdapter(mMenuAdapter);
@@ -178,6 +176,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
+		CharSequence sTitle = item.getTitle();
 		jG.Log.d("onOptionsItemSelected = " + item.getTitle());
 		if (item.getItemId() == android.R.id.home) {
 
@@ -189,8 +188,7 @@ public class MainActivity extends SherlockFragmentActivity {
 				mDrawerLayout.openDrawer(mDrawerList);
 			}
 		}
-		CharSequence sTitle = item.getTitle();
-		if(sTitle == "Search")
+		else if(sTitle == "Search")
 		{
 			/*
 			Intent intent = new Intent(this, com.wecandoit.jinju_0_0_4.jActivity_YoutubeSearchList.class);

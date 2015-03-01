@@ -6,8 +6,8 @@
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<item value="filter_imports;" key="filters_last_used"/>
 	<section name="RefactoringWizard.preview">
-		<item value="530" key="width"/>
-		<item value="290" key="height"/>
+		<item value="470" key="width"/>
+		<item value="230" key="height"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="true" key="renameSubpackages"/>
