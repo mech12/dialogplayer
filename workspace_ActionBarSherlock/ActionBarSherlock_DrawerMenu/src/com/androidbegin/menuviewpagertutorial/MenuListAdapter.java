@@ -49,7 +49,7 @@ public class MenuListAdapter extends BaseAdapter {
  
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View itemView = inflater.inflate(R.layout.drawer_list_item, parent,
+		View itemView = inflater.inflate(R.layout.dw_drawer_list_item, parent,
 				false);
  
 		// Locate the TextViews in drawer_list_item.xml

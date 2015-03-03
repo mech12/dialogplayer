@@ -13,7 +13,7 @@ public class FragmentTab1 extends SherlockFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// Get the view from fragmenttab1.xml
-		View view = inflater.inflate(R.layout.fragmenttab1, container, false);
+		View view = inflater.inflate(R.layout.dw_fragmenttab1, container, false);
 		return view;
 	}
 }

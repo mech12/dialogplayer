@@ -38,6 +38,7 @@
         android:required="false" />
 
     <application
+		android:name="com.yt.application.GlobalAppData"        
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
@@ -3802,7 +3803,8 @@
       <intent-filter >
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
+      </intent-filter>
+
             -->
             <meta-data
                 android:name="@string/isLaunchableActivity"
@@ -3913,6 +3915,75 @@
                 android:name="@string/isLaunchableActivity"
                 android:value="true" />
         </activity>
+        
+		<!-- =========================================================== -->
+        <!--  ytsdk -->
+        <!-- =========================================================== -->
+        
+        <activity
+            android:name="com.yt.activities.SplashActivity"
+            android:label="@string/yt_app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize" >
+        </activity>
+        <activity
+            android:name="com.yt.activities.HomePageActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults" />
+        <activity
+            android:name="com.yt.activities.DetailsActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.inmobi.androidsdk.IMBrowserActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize" />
+        <activity
+            android:name="com.yt.activities.SubListActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+            android:label="@string/yt_title_activity_sub_list" >
+        </activity>
+        
+         <!-- Must define this activity, If preview is enabled -->
+        <activity
+            android:name="yt.sdk.jar.player.PlayerActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <!-- YouTube Downloader requires this Activity. Dont Delete it -->
+        <activity
+            android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.android.publish.AppWallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        
+         <!-- Mobile Core Requiresit dont delete this -->
+        <service
+            android:name="com.ironsource.mobilcore.MobileCoreReport"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":mcServiceProcess" >
+        </service>
+
+        <receiver
+            android:name="com.ironsource.mobilcore.InstallationTracker"
+            android:enabled="true"
+            android:process=":installationTracker" >
+        </receiver>
+        
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+       
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        
+        
     </application>
 
     <instrumentation

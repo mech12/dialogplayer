@@ -35,7 +35,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// Get the view from drawer_main.xml
-		setContentView(R.layout.drawer_main);
+		setContentView(R.layout.dw_drawer_main);
  
 		// Get the Title
 		mTitle = mDrawerTitle = getTitle();

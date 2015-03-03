@@ -15,7 +15,7 @@ public class Fragment2 extends SherlockFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.viewpager_main, container, false);
+		View view = inflater.inflate(R.layout.dw_viewpager_main, container, false);
 		// Locate the ViewPager in viewpager_main.xml
 		ViewPager mViewPager = (ViewPager) view.findViewById(R.id.viewPager);
 		// Set the ViewPagerAdapter into ViewPager

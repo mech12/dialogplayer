@@ -1,0 +1,18 @@
+1425294928999	Delete element
+1425294992507	Delete element
+1425295000048	Delete elements
+1425295051569	Delete elements
+1425295202513	Delete element
+1425305932618	Delete elements
+1425305987116	Delete elements
+1425350201210	Rename type 'GetVideoListFromYouTube'
+1425362174212	Rename field 'item'
+1425362186828	Rename field 'position'
+1425362411127	Rename type 'PageAdapter'
+1425366111353	Rename field 'adapter'
+1425366125857	Rename field 'videoBox'
+1425366393782	Rename type 'VideoFragment'
+1425366412712	Rename type 'VideoEntry'
+1425366433976	Rename method 'dpToPx'
+1425373139027	Rename field 'jVideoFragment'
+1425377157350	Rename type 'jVideoFragment'

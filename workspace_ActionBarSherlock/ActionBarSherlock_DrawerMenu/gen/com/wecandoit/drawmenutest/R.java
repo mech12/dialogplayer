@@ -1004,15 +1004,15 @@ containing a value of this type.
         public static final int abs__search_dropdown_item_icons_2line=0x7f030012;
         public static final int abs__search_view=0x7f030013;
         public static final int abs__simple_dropdown_hint=0x7f030014;
-        public static final int activity_main=0x7f030015;
-        public static final int drawer_list_item=0x7f030016;
-        public static final int drawer_main=0x7f030017;
-        public static final int fragment1=0x7f030018;
-        public static final int fragmenttab1=0x7f030019;
-        public static final int fragmenttab2=0x7f03001a;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
-        public static final int sherlock_spinner_item=0x7f03001c;
-        public static final int viewpager_main=0x7f03001d;
+        public static final int dw_activity_main=0x7f030015;
+        public static final int dw_drawer_list_item=0x7f030016;
+        public static final int dw_drawer_main=0x7f030017;
+        public static final int dw_fragment1=0x7f030018;
+        public static final int dw_fragmenttab1=0x7f030019;
+        public static final int dw_fragmenttab2=0x7f03001a;
+        public static final int dw_viewpager_main=0x7f03001b;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
+        public static final int sherlock_spinner_item=0x7f03001d;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;

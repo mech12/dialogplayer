@@ -18,4 +18,5 @@ public class jG
 {
 	public static ClientThread Log;
 
+
 }

@@ -3,10 +3,9 @@ package com.wecandoit.jinju_0_0_4;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.sample.demos.*;
 import com.actionbarsherlock.view.*;
-import com.wecandoit.jinju_0_0_4.R;
+import com.wecandoit.jinju_0_0_4.*;
 import com.wecandoit.jinju_mech_lib.*;
-
-import android.support.v4.app.FragmentManager;
+ 
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
 import android.app.*;
@@ -14,12 +13,14 @@ import android.content.*;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.*;
 import android.view.View;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.support.v4.view.GravityCompat;
-
+ 
 public class MainActivity extends SherlockFragmentActivity {
 	private final String TAG = "jinju_v0.0.2::MainActivity";
 
@@ -33,28 +34,30 @@ public class MainActivity extends SherlockFragmentActivity {
 	int[] icon;
 	Fragment fragment_home = new Fragment_home();
 	Fragment fragment_myfile = new Fragment_myfile();
+	
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
-
+	
 	private ActionBar actionBar;
 	MenuItem mSearch;
 
+ 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
 		// Get the view from drawer_main.xml
-		setContentView(R.layout.drawer_main);
+		setContentView(R.layout.dw_drawer_main);
 		
 		String ip = "logio.test.clipeo.com", port = "28177";
 		jG.Log = new ClientThread("jinju", ip, port);
 		new Thread(jG.Log).start();
 		Log.d(TAG, "jG.Log is start!!");
 
+ 
 		// Get the Title
 		mDrawerTitle = getTitle();
 		mTitle = "SMP/";
-
+ 
 		// Generate title
 		title = new String[] { 
 				getString(R.string.side_home),
@@ -70,37 +73,37 @@ public class MainActivity extends SherlockFragmentActivity {
 				"따라 부르세요",
 				"따라 하세요.",
 				};
-
+ 
 		// Generate icon
 		icon = new int[] { R.drawable.side_home, R.drawable.side_myfile,
 				R.drawable.side_dialog, R.drawable.side_music,
 				R.drawable.side_dance, };
-
+ 
 		// Locate DrawerLayout in drawer_main.xml
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
+ 
 		// Locate ListView in drawer_main.xml
 		mDrawerList = (ListView) findViewById(R.id.listview_drawer);
-
+ 
 		// Set a custom shadow that overlays the main content when the drawer
 		// opens
 		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
 				GravityCompat.START);
-
+ 
 		// Pass string arrays to jNaviDraw_MenuListAdapter
 		mMenuAdapter = new jNaviDraw_MenuListAdapter(MainActivity.this, title,
 				subtitle, icon);
-
-		// Set the jNaviDraw_MenuListAdapter to the ListView
+ 
+		// Set the MenuListAdapter to the ListView
 		mDrawerList.setAdapter(mMenuAdapter);
-
+ 
 		// Capture listview menu item click
 		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
+ 
 		// Enable ActionBar app icon to behave as action to toggle nav drawer
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+ 
 		// ActionBarDrawerToggle ties together the the proper interactions
 		// between the sliding drawer and the action bar app icon
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
@@ -120,22 +123,19 @@ public class MainActivity extends SherlockFragmentActivity {
 				super.onDrawerOpened(drawerView);
 			}
 		};
-
+ 
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-
+ 
 		if (savedInstanceState == null) {
 			selectItem(0);
 		}
-		
 		if (jG.Log.isConnect) {
 			String str = String.format("jLog is connected : %s : %s", ip, port);
 			Log.d(TAG, str);
 			jG.Log.d(str);
 		}
 
-
 	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -166,13 +166,17 @@ public class MainActivity extends SherlockFragmentActivity {
             .setIcon(isLight ? R.drawable.ic_refresh_inverse : R.drawable.ic_refresh)
             .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 		
+        
+        menu.add("YTSDK")
+        .setIcon(isLight ? R.drawable.yt_ic_launcher : R.drawable.yt_ic_launcher)
+        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
 		return true;
 	}
-
-	final static int ACT_SEARCH = 0;
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-
+ 
 		jG.Log.d("onOptionsItemSelected = " + item.getTitle());
 		if (item.getItemId() == android.R.id.home) {
 
@@ -200,6 +204,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		    startActivity(intent);
 			
 		}
+		else if(sTitle == "YTSDK")
+		{
+			Intent intent = new Intent(this, com.yt.activities.SplashActivity.class);
+			startActivity(intent);
+		}
+		
 		else if(sTitle == "Demo")
 		{
 			Intent intent = new Intent(this, com.actionbarsherlock.sample.demos.SampleList.class);
@@ -230,7 +240,7 @@ public class MainActivity extends SherlockFragmentActivity {
 
 		return super.onOptionsItemSelected(item);
 	}
-
+ 
 	// ListView click listener in the navigation drawer
 	private class DrawerItemClickListener implements
 			ListView.OnItemClickListener {
@@ -240,9 +250,9 @@ public class MainActivity extends SherlockFragmentActivity {
 			selectItem(position);
 		}
 	}
-
+ 
 	private void selectItem(int position) {
-
+ 
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		// Locate Position
 		switch (position) {
@@ -263,41 +273,42 @@ public class MainActivity extends SherlockFragmentActivity {
 		// Close drawer
 		mDrawerLayout.closeDrawer(mDrawerList);
 	}
-
+ 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 		// Sync the toggle state after onRestoreInstanceState has occurred.
 		mDrawerToggle.syncState();
 	}
-
+ 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		// Pass any configuration change to the drawer toggles
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
-
+ 
 	@Override
 	public void setTitle(CharSequence title) {
 		mTitle = title;
 		getSupportActionBar().setTitle(mTitle);
 	}
-
+ 
 	@Override
 	public void onBackPressed() {
-
+ 
 		FragmentManager manager = getSupportFragmentManager();
 		if (manager.getBackStackEntryCount() > 0) {
 			// If there are back-stack entries, leave the FragmentActivity
 			// implementation take care of them.
 			manager.popBackStack();
-
+ 
 		} else {
 			// Otherwise, ask user if he wants to leave :)
 			super.onBackPressed();
 		}
 	}
+	final static int ACT_SEARCH = 0;
 	
 	@Override
 	protected void onActivityResult (int requestCode, int resultCode, Intent data) {
@@ -308,6 +319,5 @@ public class MainActivity extends SherlockFragmentActivity {
 			}
 			break;
 		}
-	}
-	
+	}	
 }
