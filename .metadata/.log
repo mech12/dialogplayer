@@ -8734,3 +8734,6 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2015-03-03 19:28:24.415
 !MESSAGE A resource already exists on disk 'D:\adt_job\workspace\workspace_ActionBarSherlock\jinju_v0.0.4\.settings'.
+
+!ENTRY org.eclipse.ui 2 2 2015-03-03 19:44:10.669
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
