@@ -76,7 +76,7 @@ import com.yt.item.VideoItem;
 
 /**
  * A sample Activity showing how to manage multiple YouTubeThumbnailViews in an
- * adapter for display in a List. When the list items are clicked, the video is
+ * mAdapter for display in a List. When the list items are clicked, the video is
  * played by using a YouTubePlayerFragment.
  * <p>
  * The demo supports custom fullscreen and transitioning between portrait and
@@ -180,7 +180,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	@Override
 	public boolean onQueryTextSubmit(String query) {
 		jG.Log.d("onQueryTextSubmit = " + query);
-		
+
 		Pattern pattern = Pattern.compile("\\s+");
 		Matcher matcher = pattern.matcher(query);
 		String decodedSearchStr = matcher.replaceAll("%20");
@@ -188,7 +188,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		String searchUrl = SEARCH_URL_1 + decodedSearchStr + SEARCH_URL_2;
 
 		new jGetterVideoListFromYouTube().execute(searchUrl);
-		
+
 		return true;
 	}
 
@@ -349,7 +349,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	 */
 	public static final class VideoListFragment extends ListFragment {
 
-		private static final List<VideoEntry> VIDEO_LIST;
+		private static List<VideoEntry> mVideoList;
 		static {
 			List<VideoEntry> list = new ArrayList<VideoEntry>();
 			list.add(new VideoEntry("YouTube Collection", "Y_UmWdcTrrc"));
@@ -359,49 +359,49 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 			list.add(new VideoEntry("Autocompleter", "blB_X38YSxQ"));
 			list.add(new VideoEntry("GMail Motion", "Bu927_ul_X0"));
 			list.add(new VideoEntry("Translate for Animals", "3I24bSteJpw"));
-			VIDEO_LIST = Collections.unmodifiableList(list);
+			mVideoList = Collections.unmodifiableList(list);
 		}
 
-		private PageAdapter adapter;
-		private View videoBox;
+		private PageAdapter mAdapter;
+		private View mVideoBox;
 
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			adapter = new PageAdapter(getActivity(), VIDEO_LIST);
+			mAdapter = new PageAdapter(getActivity(), mVideoList);
 		}
 
 		@Override
 		public void onActivityCreated(Bundle savedInstanceState) {
 			super.onActivityCreated(savedInstanceState);
 
-			videoBox = getActivity().findViewById(R.id.video_box);
+			mVideoBox = getActivity().findViewById(R.id.video_box);
 			getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-			setListAdapter(adapter);
+			setListAdapter(mAdapter);
 		}
 
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
-			String videoId = VIDEO_LIST.get(position).videoId;
+			String videoId = mVideoList.get(position).videoId;
 
 			VideoFragment videoFragment = (VideoFragment) getFragmentManager()
 					.findFragmentById(R.id.video_fragment_container);
 			videoFragment.setVideoId(videoId);
 
-			// The videoBox is INVISIBLE if no video was previously selected, so
+			// The mVideoBox is INVISIBLE if no video was previously selected, so
 			// we need to show it now.
-			if (videoBox.getVisibility() != View.VISIBLE) {
+			if (mVideoBox.getVisibility() != View.VISIBLE) {
 				if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 					// Initially translate off the screen so that it can be
 					// animated in from below.
-					videoBox.setTranslationY(videoBox.getHeight());
+					mVideoBox.setTranslationY(mVideoBox.getHeight());
 				}
-				videoBox.setVisibility(View.VISIBLE);
+				mVideoBox.setVisibility(View.VISIBLE);
 			}
 
 			// If the fragment is off the screen, we animate it in.
-			if (videoBox.getTranslationY() > 0) {
-				videoBox.animate().translationY(0)
+			if (mVideoBox.getTranslationY() > 0) {
+				mVideoBox.animate().translationY(0)
 						.setDuration(ANIMATION_DURATION_MILLIS);
 			}
 		}
@@ -410,11 +410,11 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		public void onDestroyView() {
 			super.onDestroyView();
 
-			adapter.releaseLoaders();
+			mAdapter.releaseLoaders();
 		}
 
 		public void setLabelVisibility(boolean visible) {
-			adapter.setLabelVisibility(visible);
+			mAdapter.setLabelVisibility(visible);
 		}
 
 	}
@@ -642,56 +642,52 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		params.gravity = gravity;
 		view.setLayoutParams(params);
 	}
-	
-	
-	void searchYoutube()
-	{
-		//http://stackoverflow.com/questions/21914165/how-to-search-videos-with-youtube-data-api-in-android		
+
+	void searchYoutube() {
+		// http://stackoverflow.com/questions/21914165/how-to-search-videos-with-youtube-data-api-in-android
 	}
-	
+
 	private final String SEARCH_URL_1 = "http://gdata.youtube.com/feeds/api/videos?q=";
 	private final String SEARCH_URL_2 = "&max-results=10&v=2.1&start-index=1";
 
 	private class jGetterVideoListFromYouTube extends
-	AsyncTask<String, Void, ArrayList<VideoItem>> {
+			AsyncTask<String, Void, ArrayList<VideoItem>> {
 
-	@Override
-	protected void onPreExecute() {
-		super.onPreExecute();
-		//progressBar.setVisibility(View.VISIBLE);
-		//mGridView.setVisibility(View.GONE);
-	}
-	
-	@Override
-	protected ArrayList<VideoItem> doInBackground(String... params) {
-		ArrayList<VideoItem> videoList = null;
-		String searchUrl = params[0];
-	
-		if (searchUrl != null && searchUrl.length() > 0) {
-	
-			videoList = GData.getGData(searchUrl,
-					jActivity_YoutubeSearchList.this, null);
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			// progressBar.setVisibility(View.VISIBLE);
+			// mGridView.setVisibility(View.GONE);
 		}
-	
-		return videoList;
-	}
-	
-	@Override
-	protected void onPostExecute(ArrayList<VideoItem> result) {
-		super.onPostExecute(result);
-		// Cancel the Loading Dialog
-		//progressBar.setVisibility(View.GONE);
-		//addVideoList(result);
-		
-		for(VideoItem v : result)
-		{
-			jG.Log.d("v= " + v.getTitle() + " : " + v.getVideoId());
-			
-		}
-		
-	
-	}
 
-}
+		@Override
+		protected ArrayList<VideoItem> doInBackground(String... params) {
+			ArrayList<VideoItem> videoList = null;
+			String searchUrl = params[0];
+
+			if (searchUrl != null && searchUrl.length() > 0) {
+
+				videoList = GData.getGData(searchUrl,
+						jActivity_YoutubeSearchList.this, null);
+			}
+
+			return videoList;
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<VideoItem> result) {
+			super.onPostExecute(result);
+			// Cancel the Loading Dialog
+			// progressBar.setVisibility(View.GONE);
+			// addVideoList(result);
+
+			for (VideoItem v : result) {
+				jG.Log.d("v= " + v.getTitle() + " : " + v.getVideoId());
+
+			}
+
+		}
+
+	}
 
 }
