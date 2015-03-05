@@ -23,6 +23,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -34,6 +36,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.MatrixCursor;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.BaseColumns;
@@ -67,6 +70,9 @@ import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailLoader.ErrorReason;
 import com.google.android.youtube.player.YouTubeThumbnailView;
 import com.wecandoit.jinju_mech_lib.jG;
+import com.yt.common.utils.GData;
+import com.yt.fragments.SearchListFragment;
+import com.yt.item.VideoItem;
 
 /**
  * A sample Activity showing how to manage multiple YouTubeThumbnailViews in an
@@ -174,6 +180,15 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	@Override
 	public boolean onQueryTextSubmit(String query) {
 		jG.Log.d("onQueryTextSubmit = " + query);
+		
+		Pattern pattern = Pattern.compile("\\s+");
+		Matcher matcher = pattern.matcher(query);
+		String decodedSearchStr = matcher.replaceAll("%20");
+
+		String searchUrl = SEARCH_URL_1 + decodedSearchStr + SEARCH_URL_2;
+
+		new jGetterVideoListFromYouTube().execute(searchUrl);
+		
 		return true;
 	}
 
@@ -633,5 +648,50 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	{
 		//http://stackoverflow.com/questions/21914165/how-to-search-videos-with-youtube-data-api-in-android		
 	}
+	
+	private final String SEARCH_URL_1 = "http://gdata.youtube.com/feeds/api/videos?q=";
+	private final String SEARCH_URL_2 = "&max-results=10&v=2.1&start-index=1";
+
+	private class jGetterVideoListFromYouTube extends
+	AsyncTask<String, Void, ArrayList<VideoItem>> {
+
+	@Override
+	protected void onPreExecute() {
+		super.onPreExecute();
+		//progressBar.setVisibility(View.VISIBLE);
+		//mGridView.setVisibility(View.GONE);
+	}
+	
+	@Override
+	protected ArrayList<VideoItem> doInBackground(String... params) {
+		ArrayList<VideoItem> videoList = null;
+		String searchUrl = params[0];
+	
+		if (searchUrl != null && searchUrl.length() > 0) {
+	
+			videoList = GData.getGData(searchUrl,
+					jActivity_YoutubeSearchList.this, null);
+		}
+	
+		return videoList;
+	}
+	
+	@Override
+	protected void onPostExecute(ArrayList<VideoItem> result) {
+		super.onPostExecute(result);
+		// Cancel the Loading Dialog
+		//progressBar.setVisibility(View.GONE);
+		//addVideoList(result);
+		
+		for(VideoItem v : result)
+		{
+			jG.Log.d("v= " + v.getTitle() + " : " + v.getVideoId());
+			
+		}
+		
+	
+	}
+
+}
 
 }
