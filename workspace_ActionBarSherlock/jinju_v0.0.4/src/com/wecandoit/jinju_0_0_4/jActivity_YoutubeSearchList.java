@@ -101,11 +101,11 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	 */
 	private static final int RECOVERY_DIALOG_REQUEST = 1;
 
-	private VideoListFragment listFragment;
-	private VideoFragment videoFragment;
+	private VideoListFragment mVideoListFragment;
+	private VideoFragment mVideoFragment;
 
-	private View videoBox;
-	private View closeButton;
+	private View mVideoBox;
+	private View mCloseButton;
 
 	private boolean isFullscreen;
 
@@ -115,15 +115,15 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 
 		setContentView(R.layout.smp_youtuble_video_list_demo);
 
-		listFragment = (VideoListFragment) getFragmentManager()
+		mVideoListFragment = (VideoListFragment) getFragmentManager()
 				.findFragmentById(R.id.list_fragment);
-		videoFragment = (VideoFragment) getFragmentManager().findFragmentById(
+		mVideoFragment = (VideoFragment) getFragmentManager().findFragmentById(
 				R.id.video_fragment_container);
 
-		videoBox = findViewById(R.id.video_box);
-		closeButton = findViewById(R.id.close_button);
+		mVideoBox = findViewById(R.id.video_box);
+		mCloseButton = findViewById(R.id.close_button);
 
-		videoBox.setVisibility(View.INVISIBLE);
+		mVideoBox.setVisibility(View.INVISIBLE);
 
 		layout();
 
@@ -148,9 +148,10 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		// mSearchView.setIconifiedByDefault(false);// jTODO 적용안됨.
 		// mSearchView.setIconified(false);
 		// mSearchView.onActionViewExpanded();
-		mSearchView.setQueryHint("Search for Youtube");
+		mSearchView.setQueryHint("Search for Internet");
 		mSearchView.setOnQueryTextListener(this);
-		mSearchView.setOnSuggestionListener(this);
+		mSearchView.setSubmitButtonEnabled(true);
+		//mSearchView.setOnSuggestionListener(this);
 
 		if (mSuggestionsAdapter == null) {
 			MatrixCursor cursor = new MatrixCursor(COLUMNS);
@@ -164,15 +165,19 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		mSearchView.setSuggestionsAdapter(mSuggestionsAdapter);
 		mSearchView.setIconified(false);
 		mSearchView.setIconifiedByDefault(false);
+		//mSearchView.getActionView().expandActionView();
+		mSearchView.requestFocus();
 
-		menu.add("Search")
-				.setIcon(
+		MenuItem searchMenuItem =  menu.add("Search");
+		searchMenuItem.setIcon(
 						isLight ? R.drawable.ic_search_inverse
 								: R.drawable.abs__ic_search)
 				.setActionView(mSearchView)
 				.setShowAsAction(
 						MenuItem.SHOW_AS_ACTION_IF_ROOM
 								| MenuItem.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
+		
+		searchMenuItem.expandActionView();
 
 		return true;
 	}
@@ -285,49 +290,57 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	private void layout() {
 		boolean isPortrait = getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
 
-		listFragment.getView().setVisibility(
+		mVideoListFragment.getView().setVisibility(
 				isFullscreen ? View.GONE : View.VISIBLE);
-		listFragment.setLabelVisibility(isPortrait);
-		closeButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
+		mVideoListFragment.setLabelVisibility(isPortrait);
+		mCloseButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
 
 		if (isFullscreen) {
-			videoBox.setTranslationY(0); // Reset any translation that was
+			mVideoBox.setTranslationY(0); // Reset any translation that was
 											// applied in portrait.
-			setLayoutSize(videoFragment.getView(), MATCH_PARENT, MATCH_PARENT);
-			setLayoutSizeAndGravity(videoBox, MATCH_PARENT, MATCH_PARENT,
+			setLayoutSize(mVideoFragment.getView(), MATCH_PARENT, MATCH_PARENT);
+			setLayoutSizeAndGravity(mVideoBox, MATCH_PARENT, MATCH_PARENT,
 					Gravity.TOP | Gravity.LEFT);
 		} else if (isPortrait) {
-			setLayoutSize(listFragment.getView(), MATCH_PARENT, MATCH_PARENT);
-			setLayoutSizeAndGravity(videoBox, MATCH_PARENT, WRAP_CONTENT,
+			setLayoutSize(mVideoListFragment.getView(), MATCH_PARENT, MATCH_PARENT);
+			setLayoutSizeAndGravity(mVideoBox, MATCH_PARENT, WRAP_CONTENT,
 					Gravity.BOTTOM);
-			setLayoutSize(videoFragment.getView(), MATCH_PARENT, WRAP_CONTENT);
+			setLayoutSize(mVideoFragment.getView(), MATCH_PARENT, WRAP_CONTENT);
 		} else {
-			videoBox.setTranslationY(0); // Reset any translation that was
+			mVideoBox.setTranslationY(0); // Reset any translation that was
 											// applied in portrait.
 			int screenWidth = dpToPx(getResources().getConfiguration().screenWidthDp);
-			setLayoutSize(listFragment.getView(), screenWidth / 4, MATCH_PARENT);
+			setLayoutSize(mVideoListFragment.getView(), screenWidth / 4, MATCH_PARENT);
 			int videoWidth = screenWidth - screenWidth / 4
 					- dpToPx(LANDSCAPE_VIDEO_PADDING_DP);
-			setLayoutSize(videoFragment.getView(), videoWidth, WRAP_CONTENT);
-			setLayoutSizeAndGravity(videoBox, videoWidth, WRAP_CONTENT,
+			setLayoutSize(mVideoFragment.getView(), videoWidth, WRAP_CONTENT);
+			setLayoutSizeAndGravity(mVideoBox, videoWidth, WRAP_CONTENT,
 					Gravity.RIGHT | Gravity.CENTER_VERTICAL);
 		}
 	}
 
 	public void onClickClose(@SuppressWarnings("unused") View view) {
-		listFragment.getListView().clearChoices();
-		listFragment.getListView().requestLayout();
-		videoFragment.pause();
-		ViewPropertyAnimator animator = videoBox.animate()
-				.translationYBy(videoBox.getHeight())
+		mVideoListFragment.getListView().clearChoices();
+		mVideoListFragment.getListView().requestLayout();
+		mVideoFragment.pause();
+		ViewPropertyAnimator animator = mVideoBox.animate()
+				.translationYBy(mVideoBox.getHeight())
 				.setDuration(ANIMATION_DURATION_MILLIS);
 		runOnAnimationEnd(animator, new Runnable() {
 			@Override
 			public void run() {
-				videoBox.setVisibility(View.INVISIBLE);
+				mVideoBox.setVisibility(View.INVISIBLE);
 			}
 		});
 	}
+	
+	@Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        //backPressCloseHandler.onBackPressed();
+    }
+	
+	
 
 	@TargetApi(16)
 	private void runOnAnimationEnd(ViewPropertyAnimator animator,
@@ -349,31 +362,35 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	 */
 	public static final class VideoListFragment extends ListFragment {
 
-		private static List<VideoEntry> mVideoList;
-		static {
+		public static List<VideoEntry> mVideoList;
+
+		public static PageAdapter mAdapter;
+		private View mVideoBox;
+
+		@Override
+		public void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			
+		}
+
+		@Override
+		public void onActivityCreated(Bundle savedInstanceState) {
+			super.onActivityCreated(savedInstanceState);
+			
 			List<VideoEntry> list = new ArrayList<VideoEntry>();
 			list.add(new VideoEntry("YouTube Collection", "Y_UmWdcTrrc"));
+			/*
 			list.add(new VideoEntry("GMail Tap", "1KhZKNZO8mQ"));
 			list.add(new VideoEntry("Chrome Multitask", "UiLSiqyDf4Y"));
 			list.add(new VideoEntry("Google Fiber", "re0VRK6ouwI"));
 			list.add(new VideoEntry("Autocompleter", "blB_X38YSxQ"));
 			list.add(new VideoEntry("GMail Motion", "Bu927_ul_X0"));
 			list.add(new VideoEntry("Translate for Animals", "3I24bSteJpw"));
-			mVideoList = Collections.unmodifiableList(list);
-		}
-
-		private PageAdapter mAdapter;
-		private View mVideoBox;
-
-		@Override
-		public void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
+			*/
+			mVideoList = list;//Collections.unmodifiableList(list);
+			
 			mAdapter = new PageAdapter(getActivity(), mVideoList);
-		}
-
-		@Override
-		public void onActivityCreated(Bundle savedInstanceState) {
-			super.onActivityCreated(savedInstanceState);
+			
 
 			mVideoBox = getActivity().findViewById(R.id.video_box);
 			getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -382,6 +399,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 
 		@Override
 		public void onListItemClick(ListView l, View v, int position, long id) {
+			if(mVideoList==null) return;
 			String videoId = mVideoList.get(position).videoId;
 
 			VideoFragment videoFragment = (VideoFragment) getFragmentManager()
@@ -410,10 +428,12 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		public void onDestroyView() {
 			super.onDestroyView();
 
+			if(mAdapter!=null)
 			mAdapter.releaseLoaders();
 		}
 
 		public void setLabelVisibility(boolean visible) {
+			if(mAdapter!=null)
 			mAdapter.setLabelVisibility(visible);
 		}
 
@@ -427,7 +447,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	 */
 	private static final class PageAdapter extends BaseAdapter {
 
-		private final List<VideoEntry> entries;
+		private final List<VideoEntry> mEntries;
 		private final List<View> entryViews;
 		private final Map<YouTubeThumbnailView, YouTubeThumbnailLoader> thumbnailViewToLoaderMap;
 		private final LayoutInflater inflater;
@@ -436,7 +456,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		private boolean labelsVisible;
 
 		public PageAdapter(Context context, List<VideoEntry> entries) {
-			this.entries = entries;
+			this.mEntries = entries;
 
 			entryViews = new ArrayList<View>();
 			thumbnailViewToLoaderMap = new HashMap<YouTubeThumbnailView, YouTubeThumbnailLoader>();
@@ -463,12 +483,12 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 
 		@Override
 		public int getCount() {
-			return entries.size();
+			return mEntries.size();
 		}
 
 		@Override
 		public VideoEntry getItem(int position) {
-			return entries.get(position);
+			return mEntries.get(position);
 		}
 
 		@Override
@@ -479,7 +499,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View view = convertView;
-			VideoEntry entry = entries.get(position);
+			VideoEntry entry = mEntries.get(position);
 
 			// There are three cases here
 			if (view == null) {
@@ -680,11 +700,12 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 			// Cancel the Loading Dialog
 			// progressBar.setVisibility(View.GONE);
 			// addVideoList(result);
-
+			VideoListFragment.mVideoList.clear();
 			for (VideoItem v : result) {
 				jG.Log.d("v= " + v.getTitle() + " : " + v.getVideoId());
-
+				VideoListFragment.mVideoList.add(new VideoEntry(v.getTitle(), v.getVideoId()));
 			}
+			VideoListFragment.mAdapter.notifyDataSetChanged();
 
 		}
 
