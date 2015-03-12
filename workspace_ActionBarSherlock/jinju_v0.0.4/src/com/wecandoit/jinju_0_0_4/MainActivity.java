@@ -144,6 +144,11 @@ public class MainActivity extends SherlockFragmentActivity {
         menu.add("Search")
 	        .setIcon(isLight ? R.drawable.ic_search_inverse : R.drawable.ic_search)
 	        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
+        menu.add("Book_AndExam")
+        .setIcon(isLight ? R.drawable.ic_compose_inverse : R.drawable.ic_compose)
+        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        
 
         menu.add("Demo")
             .setIcon(isLight ? R.drawable.ic_compose_inverse : R.drawable.ic_compose)
@@ -203,6 +208,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		    intent.setComponent(new ComponentName("com.wecandoit.jinju_0_0_4", "com.wecandoit.jinju_0_0_4.jActivity_YoutubeSearchList"));
 		    startActivity(intent);
 			
+		}
+		else if(sTitle == "Book_AndExam")
+		{
+		    Intent intent = new Intent();
+		    intent.setComponent(new ComponentName("andexam.ver4_1", "andexam.ver4_1.AndExam"));
+		    startActivity(intent);
 		}
 		else if(sTitle == "YTSDK")
 		{

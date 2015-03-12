@@ -106,6 +106,8 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 
 	private View mVideoBox;
 	private View mCloseButton;
+	private View mFavoriteButton;
+	private View mDownloadButton;
 
 	private boolean isFullscreen;
 
@@ -122,6 +124,8 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 
 		mVideoBox = findViewById(R.id.video_box);
 		mCloseButton = findViewById(R.id.close_button);
+		mFavoriteButton = findViewById(R.id.favorite_button);
+		mDownloadButton = findViewById(R.id.download_button);
 
 		mVideoBox.setVisibility(View.INVISIBLE);
 
@@ -294,6 +298,8 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 				isFullscreen ? View.GONE : View.VISIBLE);
 		mVideoListFragment.setLabelVisibility(isPortrait);
 		mCloseButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
+		//mFavoriteButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
+		//mDownloadButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
 
 		if (isFullscreen) {
 			mVideoBox.setTranslationY(0); // Reset any translation that was
@@ -333,10 +339,38 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 			}
 		});
 	}
+	public void onClickDownload(@SuppressWarnings("unused") View view) {
+		mVideoListFragment.getListView().clearChoices();
+		mVideoListFragment.getListView().requestLayout();
+		mVideoFragment.pause();
+		ViewPropertyAnimator animator = mVideoBox.animate()
+				.translationYBy(mVideoBox.getHeight())
+				.setDuration(ANIMATION_DURATION_MILLIS);
+		runOnAnimationEnd(animator, new Runnable() {
+			@Override
+			public void run() {
+				mVideoBox.setVisibility(View.INVISIBLE);
+			}
+		});
+	}
+	public void onClickFavorite(@SuppressWarnings("unused") View view) {
+		mVideoListFragment.getListView().clearChoices();
+		mVideoListFragment.getListView().requestLayout();
+		mVideoFragment.pause();
+		ViewPropertyAnimator animator = mVideoBox.animate()
+				.translationYBy(mVideoBox.getHeight())
+				.setDuration(ANIMATION_DURATION_MILLIS);
+		runOnAnimationEnd(animator, new Runnable() {
+			@Override
+			public void run() {
+				mVideoBox.setVisibility(View.INVISIBLE);
+			}
+		});
+	}
 	
 	@Override
     public void onBackPressed() {
-        //super.onBackPressed();
+        super.onBackPressed();
         //backPressCloseHandler.onBackPressed();
     }
 	

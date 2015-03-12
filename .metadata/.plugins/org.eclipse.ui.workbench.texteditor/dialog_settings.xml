@@ -6,20 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="startActivity" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="startActivity"/>
+			<item value="mVideoBox"/>
+			<item value="video_box"/>
+			<item value="mCloseButton"/>
+			<item value="mVideoListFragment"/>
+			<item value="onClickClose"/>
+			<item value="  &lt;/LinearLayout&gt;"/>
 			<item value="expandActionView"/>
-			<item value="mSearch"/>
-			<item value="SearchView"/>
-			<item value="Search for Youtube"/>
-			<item value="requestFocus"/>
-			<item value="mSearchView"/>
-			<item value="setOnActionExpandListener"/>
-			<item value="setSubmitButtonEnabled"/>
 		</list>
 		<list key="replacehistory">
 			<item value="import com.wecandoit.jinju_0_0_4.R;"/>
