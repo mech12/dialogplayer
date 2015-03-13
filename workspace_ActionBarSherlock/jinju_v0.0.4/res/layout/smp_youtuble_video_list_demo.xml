@@ -38,30 +38,40 @@
 	      android:layout_height="wrap_content"
 	      android:layout_gravity="bottom|center_horizontal"
 	      android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/favorite_button"
-			android:text="Favorite"            
+  
+   	      	      
+		<Button
+            android:id="@+id/favorite_button_off"
+			android:text="Favorite" 
 	        android:layout_width="wrap_content"
-	        android:layout_gravity="center_horizontal"
 	        android:layout_height="wrap_content"
-	        android:onClick="onClickFavorite"/>
-   	    
+	        android:layout_gravity="center_horizontal"
+			android:drawableRight="@drawable/favorite_off" 
+	        android:onClick="onClickFavoriteOff"/>
+	      	      
+	      <Button
+            android:id="@+id/favorite_button_on"
+			android:text="Favorite" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+			android:drawableRight="@drawable/favorite_on" 
+	        android:onClick="onClickFavoriteOn"/>	      	      
    	    	    
         <Button
             android:id="@+id/download_button"
-			android:text="Download"            
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_horizontal"
+	        android:drawableRight="@drawable/download_file"
 	        android:onClick="onClickDownload"/>
-	    	    	      	      
-	    <ImageButton
-	        android:id="@+id/close_button"
+        
+         <Button
+            android:id="@+id/close_button"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_horizontal"
-	        android:src="@android:drawable/btn_dialog"
+	        android:drawableRight="@drawable/close"
 	        android:onClick="onClickClose"/>
 	    
 	  </LinearLayout>

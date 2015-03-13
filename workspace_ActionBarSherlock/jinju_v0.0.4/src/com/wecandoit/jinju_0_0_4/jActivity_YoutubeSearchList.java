@@ -70,6 +70,7 @@ import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailLoader.ErrorReason;
 import com.google.android.youtube.player.YouTubeThumbnailView;
 import com.wecandoit.jinju_mech_lib.jG;
+import com.yt.activities.YTSDKUtils;
 import com.yt.common.utils.GData;
 import com.yt.fragments.SearchListFragment;
 import com.yt.item.VideoItem;
@@ -107,9 +108,14 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 	private View mVideoBox;
 	private View mCloseButton;
 	private View mFavoriteButton;
+	private View mFavoriteButtonOn;
+	private View mFavoriteButtonOff;
+
 	private View mDownloadButton;
 
 	private boolean isFullscreen;
+	
+	public static String mCurrVideoID;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -124,7 +130,13 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 
 		mVideoBox = findViewById(R.id.video_box);
 		mCloseButton = findViewById(R.id.close_button);
-		mFavoriteButton = findViewById(R.id.favorite_button);
+		//mFavoriteButton = findViewById(R.id.favorite_button);
+		mFavoriteButtonOn = findViewById(R.id.favorite_button_on);
+		mFavoriteButtonOff = findViewById(R.id.favorite_button_off);
+		mFavoriteButtonOn.setVisibility(View.GONE);
+		
+		mFavoriteButton = mFavoriteButtonOff;
+		
 		mDownloadButton = findViewById(R.id.download_button);
 
 		mVideoBox.setVisibility(View.INVISIBLE);
@@ -340,6 +352,19 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		});
 	}
 	public void onClickDownload(@SuppressWarnings("unused") View view) {
+		
+		YTSDKUtils.getYTSDK().showCustomDialog(jActivity_YoutubeSearchList.this , true, false);
+		YTSDKUtils.getYTSDK().download(jActivity_YoutubeSearchList.this,
+				mCurrVideoID);
+
+	}
+	public void onClickFavoriteOn(@SuppressWarnings("unused") View view) {
+
+		jG.Log.d("onClickFavoriteOn");
+		mFavoriteButton.setVisibility(View.GONE);
+		mFavoriteButton = mFavoriteButtonOff;
+		mFavoriteButton.setVisibility(View.VISIBLE );
+		/*
 		mVideoListFragment.getListView().clearChoices();
 		mVideoListFragment.getListView().requestLayout();
 		mVideoFragment.pause();
@@ -352,8 +377,30 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 				mVideoBox.setVisibility(View.INVISIBLE);
 			}
 		});
+		*/
+	}
+	public void onClickFavoriteOff(@SuppressWarnings("unused") View view) {
+		jG.Log.d("onClickFavoriteOff");
+		mFavoriteButton.setVisibility(View.GONE);
+		mFavoriteButton = mFavoriteButtonOn;
+		mFavoriteButton.setVisibility(View.VISIBLE );
+		/*
+		mVideoListFragment.getListView().clearChoices();
+		mVideoListFragment.getListView().requestLayout();
+		mVideoFragment.pause();
+		ViewPropertyAnimator animator = mVideoBox.animate()
+				.translationYBy(mVideoBox.getHeight())
+				.setDuration(ANIMATION_DURATION_MILLIS);
+		runOnAnimationEnd(animator, new Runnable() {
+			@Override
+			public void run() {
+				mVideoBox.setVisibility(View.INVISIBLE);
+			}
+		});
+		*/
 	}
 	public void onClickFavorite(@SuppressWarnings("unused") View view) {
+		/*
 		mVideoListFragment.getListView().clearChoices();
 		mVideoListFragment.getListView().requestLayout();
 		mVideoFragment.pause();
@@ -366,8 +413,9 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 				mVideoBox.setVisibility(View.INVISIBLE);
 			}
 		});
+		*/
 	}
-	
+
 	@Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -413,13 +461,13 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 			
 			List<VideoEntry> list = new ArrayList<VideoEntry>();
 			list.add(new VideoEntry("YouTube Collection", "Y_UmWdcTrrc"));
-			/*
 			list.add(new VideoEntry("GMail Tap", "1KhZKNZO8mQ"));
 			list.add(new VideoEntry("Chrome Multitask", "UiLSiqyDf4Y"));
 			list.add(new VideoEntry("Google Fiber", "re0VRK6ouwI"));
 			list.add(new VideoEntry("Autocompleter", "blB_X38YSxQ"));
 			list.add(new VideoEntry("GMail Motion", "Bu927_ul_X0"));
 			list.add(new VideoEntry("Translate for Animals", "3I24bSteJpw"));
+			/*
 			*/
 			mVideoList = list;//Collections.unmodifiableList(list);
 			
@@ -435,6 +483,7 @@ public final class jActivity_YoutubeSearchList extends SherlockActivity
 		public void onListItemClick(ListView l, View v, int position, long id) {
 			if(mVideoList==null) return;
 			String videoId = mVideoList.get(position).videoId;
+			mCurrVideoID = videoId;
 
 			VideoFragment videoFragment = (VideoFragment) getFragmentManager()
 					.findFragmentById(R.id.video_fragment_container);

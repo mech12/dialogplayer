@@ -217,6 +217,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		}
 		else if(sTitle == "YTSDK")
 		{
+			/*
+		    Intent intent = new Intent();
+		    intent.setComponent(new ComponentName("com.wecandoit.jinju_downloader", "com.yt.activities.SplashActivity"));
+		    startActivity(intent);
+			*/
+		    
 			Intent intent = new Intent(this, com.yt.activities.SplashActivity.class);
 			startActivity(intent);
 		}
